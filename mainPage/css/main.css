@@ -1,0 +1,198 @@
+/*전체 공통*/
+*,
+:after,
+:before,
+:hover {
+  box-sizing: border-box;
+}
+
+/*바디*/
+body {
+  font-family: 'Noto Sans KR', 'Roboto', 'Sans-serif';
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+/*기본값 초기화*/
+h1,h2,h3,p,ul,li,form,input{
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*clearfix*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*컨테이너*/
+.main_container {
+  background-image: url(../images/main_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/*전체 섹션 공통*/
+.section {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.70);
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #ECF0F1;
+  padding-top: 2rem;
+}
+
+
+/*주요 공업사*/
+.featured_shop {
+  width: 100%;
+}
+
+.shop_list {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop_list li {
+  width: 30%;
+  border: 1px solid #ECF0F1;;
+  background: #2c3e50;
+}
+
+.shop_list li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #ECF0F1;;
+}
+
+.company_name,
+.company_address {
+   padding: .5rem;
+}
+
+.company_img {
+  width: 100%;
+  /*height: 0;*/
+  /*padding-bottom: 60%;*/
+  overflow: hidden;
+}
+
+.company_img img {
+  width: 100%;
+  /*height: auto;*/
+  vertical-align: bottom;
+  transition: all .5s ease-in-out;
+}
+
+.company_img img:hover {
+  transform: scale(1.1);
+}
+
+.estimate_req {
+  padding: .5rem;
+}
+
+.estimate_req a {
+  display: block;
+  padding: .5rem 0;
+  background: #34a77b;
+  color: #ECF0F1;;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: .9rem;
+}
+
+.swiper_pagination {
+  width: 100%;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.swiper_pagination_bullet {
+  content: "";
+  display: inline-block;
+  width: 2.5rem;
+  height: 6px;
+  margin: 0 .5rem;
+  background: #999;
+  border-radius: 0 0 2px 2px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.bullet_active {
+  background: #ECF0F1;
+}
+
+/*차량관리 팁*/
+.management_tip {
+  width: 100%;
+  background: rgba(44, 62, 80, 0.9);
+}
+
+.management_tip_list {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.management_tip_list li {
+  width: 45%;
+  margin: 1rem 2.5%;
+  border: 1px solid #ddd;
+}
+
+.management_tip_list li a {
+  display: block;
+  width: 100%;
+  color: #ECF0F1;
+}
+
+.tips_ico_img,
+.management_tip_list li h3 {
+  float: left;
+}
+
+.tips_ico_img {
+  width: 25%;
+}
+
+.tips_ico_img img {
+  width: 100%;
+  vertical-align: text-bottom;
+}
+
+.management_tip_list li h3 {
+  width: 75%;
+}
+
+
+
+
+
+/*수리사례*/
+
+.after_repair {
+  background: #ddd;
+}

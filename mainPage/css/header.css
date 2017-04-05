@@ -1,0 +1,132 @@
+
+/*헤더 영역*/
+.main_header{
+  background-image: url(../images/header_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav_top {
+  z-index: 100;
+  background: rgba(44, 62, 80, 0.95);
+  padding: .5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.gnb {
+  background: rgba(44, 62, 80, 0.95);
+  padding: .5rem 0;
+}
+
+.main_menu {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main_menu li {
+  width: 20%;
+  text-align: center;
+}
+
+.main_menu li a {
+  display: inline-block;
+  width: 100%;
+  padding: .5rem 0;
+  text-decoration: none;
+  color: #ddd;
+  font-size: .9rem;
+  transition: all .3s ease-in-out;
+}
+.main_menu li a:hover {
+  color: #34a77b;
+}
+
+/* 로고 */
+.logo {
+  display: inline-block;
+  margin-left: 10%;
+  width: 6rem;
+  padding: .8rem;
+  border: 1px solid #ECF0F1;
+  color: #ECF0F1;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+/*버튼*/
+.my_page_btn,
+.register_company_btn {
+  display: inline-block;
+  width: 5rem;
+  padding: .4rem 0;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #ccc;
+  font-size: 0.8rem;
+  transition: all .6s ease-in-out;
+  margin-top: 6px;
+}
+
+/*마이페이지 버튼*/
+.my_page_btn {
+  margin-right: 10%;
+}
+/*입점신청 버튼*/
+.register_company_btn {
+  margin-right: 1rem;
+}
+
+.my_page_btn:hover,
+.register_company_btn:hover {
+  color: #34a77b;
+  border-color: #34a77b;
+  border-radius: 25px;
+}
+
+
+/*검색폼*/
+.search_region_form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+
+.search_region_form p {
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#search_bar {
+  width: 90%;
+  height: 3rem;
+  padding-left: 2rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: alias;
+}
+
+.search_btn {
+  width: 10%;
+  height: 3rem;
+  vertical-align: top;
+  background: #E74C3C;
+  color: #fff;
+  border: none;
+  border :1px solid #E74C3C;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+}

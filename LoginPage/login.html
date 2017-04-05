@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>kardoc 로그인</title>
+  <!-- <link rel="stylesheet" href="../css/normalize.css"> -->
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <header class="login_page_header">
+    <h1 class="logo">KarDoc</h1>
+  </header>
+  <div class="login_page_wrapper">
+    <div class="login_container">
+      <h1>로그인</h1>
+      <form class="login_form" action="">
+        <label for="login_id"></label>
+          <input id="login_id" type="email" name="email" placeholder="이메일 주소" value="" maxlength="20">
+        <label for="login_pwd"></label>
+          <input id="login_pwd" type="password" name="password" placeholder="비밀번호" value="" maxlength="10">
+        <button class="login_btn" type="submit">로그인</button>
+      </form>
+      <p class="find_id_pwd">
+        <a href="#">아이디 / 비밀번호 찾기</a>
+      </p>
+      <span class="separate_line">페이스북으로 가입된 아이디가 있으신가요?</span>
+      <button class="login_btn_fb" type="button">페이스북 로그인</button>
+    </div>
+  </div>
+</body>
+</html>

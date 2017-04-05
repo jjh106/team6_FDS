@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>kardoc 업체등록</title>
+  <!-- <link rel="stylesheet" href="../css/normalize.css"> -->
+  <link rel="stylesheet" href="css/register_company.css">
+  <link rel="stylesheet" href="../css_modules/modal.css">
+</head>
+<body>
+  <header class="register_page_header">
+    <h1 class="logo">KarDoc</h1>
+  </header>
+  <div class="register_page_wrapper">
+    <div class="register_container">
+      <p>환영합니다 사장님!</p>
+      <hr>
+      <h1>업체 등록하기</h1>
+      <form class="register_form" action="">
+        <label for="register_number"></label>
+          <input id="register_number" type="text" name="사업자 번호" placeholder="사업자 번호를 기입해주세요" value="" maxlength="">
+        <label for="register_companyName"></label>
+          <input id="register_companyName" type="text" name="업체명" placeholder="업체명을 기입해주세요" value="" maxlength="">
+        <div class="find_region">
+          <a class="modal_btn" href="#">지역을 선택해주세요<img class="arrow_down_img" src="images/img_arrow_down.png" alt="지역선택"></a>
+        </div>
+        <label for=""></label>
+          <input type="text" name="address" placeholder="업체 상세주소" value maxlength="">
+        <button class="register_btn" type="submit">등록하기</button>
+      </form>
+    </div>
+  </div>
+  <!-- 모달윈도우 -->
+  <div class="modal_dim">
+    <div class="region_category modal_window">
+      <p>지역선택
+        <span>( 2개까지 선택가능 )</span>
+        <button class="modal_close_btn" type="button">X</button>
+      </p>
+      <ul class="region_list">
+        <li class="region"><a role="button" href="#">서울</a></li>
+        <li class="region"><a href="#">경기</a></li>
+        <li class="region"><a href="#">인천</a></li>
+        <li class="region"><a href="#">부산</a></li>
+        <li class="region"><a href="#">대전</a></li>
+        <li class="region"><a href="#">대구</a></li>
+        <li class="region"><a href="#">광주</a></li>
+        <li class="region"><a href="#">울산</a></li>
+        <li class="region"><a href="#">경상</a></li>
+        <li class="region"><a href="#">충청</a></li>
+        <li class="region"><a href="#">전라</a></li>
+        <li class="region"><a href="#">강원</a></li>
+        <li class="region"><a href="#">제주</a></li>
+        <li class="region"><a href="#">세종</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="js/modal.js"></script>
+</body>
+</html>

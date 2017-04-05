@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../common_css/normalize.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="../css_modules/modal.css">
+  <title>KarDoc 자동차 수리업체 검색 서비스</title>
+</head>
+<body>
+  <!-- 전체 페이지 래퍼 -->
+  <div class="page_wrapper">
+    <!-- 헤더 -->
+    <header class="main_header">
+      <nav class="nav_top">
+        <h1 class="logo">KarDoc</h1>
+        <a class="my_page_btn" href="#" role="button">마이페이지</a>
+        <a class="register_company_btn" href="../register_company/register_company.html" role="button">입점신청</a>
+      </nav>
+      <form class="search_region_form" action="">
+        <p>언제 어디서든 믿고 수리하세요!</p>
+        <label for="search_bar"></label>
+        <input class="modal_btn" id="search_bar" type="text" name="검색바" placeholder="공업사 검색하기"><button class="search_btn" type="button">검색</button>
+      </form>
+      <nav class="gnb">
+        <ul class="main_menu">
+          <li><a href="#">내주변업체</a></li>
+          <li><a href="#">강남구업체</a></li>
+          <li><a href="#">문콕 수리</a></li>
+          <li><a href="#">차량관리 팁</a></li>
+          <li><a href="#">보험수리</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 메인컨텐츠 영역 -->
+    <main class="main_container">
+      <!-- 섹션 대표공업사 나열 -->
+      <section class="section">
+        <div class="featured_shop">
+          <h2>Featured Shop</h2>
+          <ul class="shop_list">
+            <li>
+              <a href="#">
+                <div class="company_img">
+                  <img src="images/company.jpg" alt="공업사 이미지">
+                </div>
+                <h3 class="company_name">company name</h3>
+                <p class="company_address">address</p>
+              </a>
+              <div class="estimate_req">
+                <a href="" role="button">go! link</a>
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <div class="company_img">
+                  <img src="images/company.jpg" alt="공업사 이미지">
+                </div>
+                <h3 class="company_name">company name</h3>
+                <p class="company_address">address</p>
+              </a>
+              <div class="estimate_req">
+                <a href="" role="button">go! link</a>
+              </div>
+            </li>
+            <li>
+            <a href="#">
+              <div class="company_img">
+                <img src="images/company.jpg" alt="공업사 이미지">
+              </div>
+              <h3 class="company_name">company name</h3>
+              <p class="company_address">address</p>
+              </a>
+              <div class="estimate_req">
+                <a href="" role="button">go! link</a>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper_pagination">
+            <span class="swiper_pagination_bullet bullet_active"></span>
+            <span class="swiper_pagination_bullet"></span>
+            <span class="swiper_pagination_bullet"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 섹션 차량 관리팁 -->
+      <section class="section">
+        <div class="management_tip">
+          <h2>Management Tip!</h2>
+          <ul class="management_tip_list">
+            <li>
+              <a class="clearfix" href="">
+                <div class="tips_ico_img">
+                  <img src="images/" alt="이미지">
+                </div>
+                <h3>Some text~~~</h3>
+              </a>
+            </li>
+            <li>
+              <a class="clearfix" href="">
+                <div class="tips_ico_img">
+                  <img src="images/" alt="이미지">
+                </div>
+                <h3>Some text~~~</h3>
+              </a>
+            </li>
+            <li>
+              <a class="clearfix" href="">
+                <div class="tips_ico_img">
+                  <img src="images/" alt="이미지">
+                </div>
+                <h3>Some text~~~</h3>
+              </a>
+            </li>
+            <li>
+              <a class="clearfix" href="">
+                <div class="tips_ico_img">
+                  <img src="images/" alt="이미지">
+                </div>
+                <h3>Some text~~~</h3>
+              </a>
+            </li>
+            <li>
+              <a class="clearfix" href="">
+                <div class="tips_ico_img">
+                  <img src="images/" alt="이미지">
+                </div>
+                <h3>Some text~~~</h3>
+              </a>
+            </li>
+            <li>
+              <a class="clearfix" href="">
+                <div class="tips_ico_img">
+                  <img src="images/" alt="이미지">
+                </div>
+                <h3>Some text~~~</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 섹션 수리사례 및후기-->
+      <section class="section">
+        <div class="after_repair">
+          <h2>Best Examples</h2>
+          section3
+        </div>
+      </section>
+    </main>
+    <!-- 푸터 -->
+    <footer class="footer">
+      footer
+    </footer>
+  </div>
+  <!-- 모달 -->
+  <div class="modal_dim">
+    <div class="modal_window">
+      <p>지역선택
+        <span>( 2개까지 선택가능 )</span>
+        <button class="modal_close_btn" type="button">X</button>
+      </p>
+      <ul class="region_list">
+        <li class="region"><a href="#">서울</a></li>
+        <li class="region"><a href="#">경기</a></li>
+        <li class="region"><a href="#">인천</a></li>
+        <li class="region"><a href="#">부산</a></li>
+        <li class="region"><a href="#">대전</a></li>
+        <li class="region"><a href="#">대구</a></li>
+        <li class="region"><a href="#">광주</a></li>
+        <li class="region"><a href="#">울산</a></li>
+        <li class="region"><a href="#">경상</a></li>
+        <li class="region"><a href="#">충청</a></li>
+        <li class="region"><a href="#">전라</a></li>
+        <li class="region"><a href="#">강원</a></li>
+        <li class="region"><a href="#">제주</a></li>
+        <li class="region"><a href="#">세종</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="js/modal.js"></script>
+</body>
+</html>

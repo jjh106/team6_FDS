@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>kardoc 회원가입</title>
+  <!-- <link rel="stylesheet" href="../css/normalize.css"> -->
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <header class="signup_page_header">
+    <h1 class="logo">KarDoc</h1>
+  </header>
+  <div class="signup_page_wrapper">
+    <div class="signup_container">
+        <p>페이스북 계정을 가지고 있나요?</p>
+        <button class="signup_btn_fb" type="button">facebook으로 회원가입</button>
+        <hr>
+        <h1>회원가입</h1>
+        <form class="signup_form" action="">
+          <label for="mem_name"></label>
+            <input id="mem_name" type="text" placeholder="이름" value="" maxlength="10">
+          <label for="mem_email"></label>
+            <input id="mem_email" type="email" placeholder="이메일" value="" maxlength="20">
+          <label for="mem_pwd"></label>
+            <input id="mem_pwd" type="password" placeholder="비밀번호(6~10자)" value="" minlength="6" maxlength="10">
+          <label for="mem_birth"></label>
+            <input id="mem_birth" type="text" placeholder="생년월일 EX)19880225" value="" maxlength="8">
+          <label for="mem_tel"></label>
+            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" value="">
+          <fieldset>
+            <legend>성별</legend>
+            <span>성별:</span>
+            남
+            <label for="male"></label>
+              <input id="male" type="radio" name="sex" value="male">
+            여
+            <label for="female"></label>
+              <input id="female" type="radio" name="sex" value="female">
+          </fieldset>
+          <p>
+            <span class="separate_line">개인정보 이용동의</span>
+            <label for="agreement"></label>
+            <input id="agreement" type="checkbox" name="약관동의" value="agree" checked="">
+          </p>
+          <button class="signup_btn" type="submit">작성 완료</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  </html>
