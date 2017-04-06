@@ -32,6 +32,8 @@ ul {
   clear: both;
 }
 
+
+
 /*컨테이너*/
 .main_container {
   background-image: url(../images/main_bg.jpg);
@@ -40,6 +42,9 @@ ul {
   background-attachment: fixed;
   position: relative;
 }
+
+
+
 
 /*전체 섹션 공통*/
 .section {
@@ -53,6 +58,9 @@ ul {
   color: #ECF0F1;
   padding-top: 2rem;
 }
+
+
+
 
 
 /*주요 공업사*/
@@ -72,8 +80,8 @@ ul {
 
 .shop_list li {
   width: 30%;
-  border: 1px solid #ECF0F1;;
-  background: #2c3e50;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
 }
 
 .shop_list li a {
@@ -113,8 +121,8 @@ ul {
 .estimate_req a {
   display: block;
   padding: .5rem 0;
-  background: #34a77b;
-  color: #ECF0F1;;
+  background: #226A99;
+  color: #ECF0F1;
   text-align: center;
   border: 1px solid #ddd;
   font-size: .9rem;
@@ -142,14 +150,107 @@ ul {
   background: #ECF0F1;
 }
 
-/*차량관리 팁*/
-.management_tip {
-  width: 100%;
+
+
+
+
+/*수리사례*/
+
+.after_repair {
   background: rgba(44, 62, 80, 0.9);
 }
 
+.after_repair_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.after_repair_list li {
+  margin-bottom: 1%;
+}
+
+.after_repair_list li:nth-child(1),
+.after_repair_list li:nth-child(4) {
+  width: 39%;
+}
+
+.after_repair_list li:nth-child(2),
+.after_repair_list li:nth-child(3) {
+  width: 60%;
+}
+
+.after_repair_list li:nth-child(1),
+.after_repair_list li:nth-child(3) {
+  margin-right: 1%;
+}
+
+.after_repair_list li a {
+  position: relative;
+  display: block;
+  padding-bottom: 16rem;
+  width: 100%;
+  color: #ECF0F1;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  border-radius: 2px;
+}
+
+.after_repair_list li:nth-child(1) a {
+  background-image: url(../images/after_repair_1.jpg);
+}
+.after_repair_list li:nth-child(2) a {
+  background-image: url(../images/after_repair_2.jpg);
+}
+.after_repair_list li:nth-child(3) a {
+  background-image: url(../images/after_repair_3.jpg);
+}
+.after_repair_list li:nth-child(4) a {
+  background-image: url(../images/after_repair_4.jpg);
+}
+
+.after_repair_list li a:hover .dim_bg {
+  display: none;
+}
+
+.after_repair_list li a img {
+  width: 100%;
+  vertical-align: text-bottom;
+}
+
+.after_repair_list li a p {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.dim_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+/*차량관리 팁*/
+
 .management_tip_list {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -158,41 +259,23 @@ ul {
 }
 
 .management_tip_list li {
-  width: 45%;
-  margin: 1rem 2.5%;
-  border: 1px solid #ddd;
+  width: 20%;
+  height: 0;
+  padding-bottom: 20%;
+}
+
+.management_tip_list li:nth-child(1),
+.management_tip_list li:nth-child(2),
+.management_tip_list li:nth-child(4),
+.management_tip_list li:nth-child(5) {
+  margin-right: 20%;
 }
 
 .management_tip_list li a {
   display: block;
+  text-align: center;
   width: 100%;
-  color: #ECF0F1;
-}
-
-.tips_ico_img,
-.management_tip_list li h3 {
-  float: left;
-}
-
-.tips_ico_img {
-  width: 25%;
-}
-
-.tips_ico_img img {
-  width: 100%;
-  vertical-align: text-bottom;
-}
-
-.management_tip_list li h3 {
-  width: 75%;
-}
-
-
-
-
-
-/*수리사례*/
-
-.after_repair {
-  background: #ddd;
+  margin: 1.5rem 0;
+  padding: 3rem;
+  background: coral;
 }

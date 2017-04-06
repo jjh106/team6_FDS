@@ -44,18 +44,25 @@ h1,p{
 /*로그인 페이지 헤더*/
 .login_page_header {
   background: rgba(44, 62, 80, 0.90);
-  padding: 1.5rem 0;
+  padding: .5rem 0;
 }
 
 /* 로고 */
 .logo {
-  margin-left: 15%;
-  width: 6rem;
-  padding: .8rem;
+  display: inline-block;
+  margin-left: 10%;
+  width: 4rem;
   border: 1px solid #ECF0F1;
-  color: #ECF0F1;
+}
+
+.logo a {
+  display: block;
+  width: 100%;
+  padding: .4rem;
+  text-decoration: none;
   text-align: center;
-  font-size: 1rem;
+  font-size: .8rem;
+  color: #ECF0F1;
 }
 
 
@@ -63,7 +70,7 @@ h1,p{
 .login_container {
   background-color: rgba(236, 240, 241, 0.90);
   width: 70%;
-  margin:4rem auto 0;
+  margin:4rem auto;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 }
@@ -90,13 +97,16 @@ h1,p{
 
 /*로그인 폼 */
 .login_form input {
-  margin: 0 auto;
+  margin: .5rem auto;
   display: block;
   width: 60%;
-  min-width: 16rem;
-  padding: 1rem 0 1rem .5rem;
+  min-width: 18rem;
+  padding: .8rem 0 .8rem 1rem;
   font-size: .8rem;
-  border: 1px solid #ccc;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+  border-right: 2px solid #ccc;
 }
 
 #login_pwd {
@@ -107,7 +117,7 @@ h1,p{
 /*버튼 */
 
 .login_btn, .login_btn_fb {
-  width: 14rem;
+  width: 10rem;
   margin: 0 auto;
   padding: 1rem 0;
   display: block;

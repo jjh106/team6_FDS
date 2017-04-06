@@ -8,7 +8,7 @@
 
 .nav_top {
   z-index: 100;
-  background: rgba(44, 62, 80, 0.95);
+  background: #2C3E50;
   padding: .5rem 0;
   position: fixed;
   top: 0;
@@ -17,8 +17,8 @@
 }
 
 .gnb {
-  background: rgba(44, 62, 80, 0.95);
-  padding: .5rem 0;
+  background: #2C3E50;
+  padding: 4px 0;
 }
 
 .main_menu {
@@ -51,20 +51,24 @@
 .logo {
   display: inline-block;
   margin-left: 10%;
-  width: 6rem;
-  padding: .8rem;
+  width: 4rem;
   border: 1px solid #ECF0F1;
-  color: #ECF0F1;
-  text-align: center;
-  font-size: 1rem;
 }
 
-
+.logo a {
+  display: block;
+  width: 100%;
+  padding: .4rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: .8rem;
+  color: #ECF0F1;
+}
 /*버튼*/
 .my_page_btn,
 .register_company_btn {
   display: inline-block;
-  width: 5rem;
+  width: 4rem;
   padding: .4rem 0;
   float: right;
   text-align: center;
@@ -74,7 +78,6 @@
   color: #ccc;
   font-size: 0.8rem;
   transition: all .6s ease-in-out;
-  margin-top: 6px;
 }
 
 /*마이페이지 버튼*/
@@ -98,7 +101,7 @@
 .search_region_form {
   width: 60%;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 6rem 0;
 }
 
 .search_region_form p {

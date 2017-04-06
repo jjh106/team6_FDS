@@ -46,28 +46,34 @@ ul {
 /*업체등록 페이지 헤더*/
 .register_page_header {
   background: rgba(44, 62, 80, 0.90);
-  padding: 1.5rem 0;
+  padding: .5rem 0;
   width: 100%;
 }
 
 /* 로고 */
 .logo {
-  margin-left: 15%;
-  width: 6rem;
-  padding: .8rem;
+  display: inline-block;
+  margin-left: 10%;
+  width: 4rem;
   border: 1px solid #ECF0F1;
-  color: #ECF0F1;
+}
+
+.logo a {
+  display: block;
+  width: 100%;
+  padding: .4rem;
+  text-decoration: none;
   text-align: center;
-  font-size: 1rem;
+  font-size: .8rem;
+  color: #ECF0F1;
 }
 
 
 /*업체등록 전체 컨테이너 */
 .register_container {
-  background-color: rgba(236, 240, 241, 0.9);
-  width: 80%;
-  min-width: 24rem;
-  margin:4rem auto 0;
+  background-color: rgba(236, 240, 241, 0.90);
+  width: 70%;
+  margin:4rem auto;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 }
@@ -105,7 +111,6 @@ ul {
 
 .register_form input:focus {
   border-bottom: 1px solid #34a77b;
-  width: 80%;
 }
 
 .find_region {
