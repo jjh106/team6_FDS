@@ -42,18 +42,25 @@ h1,p,fieldset{
 /*회원가입 페이지 헤더*/
 .signup_page_header {
   background: rgba(44, 62, 80, 0.90);
-  padding: 1.5rem 0;
+  padding: .5rem 0;
 }
 
 /* 로고 */
 .logo {
-  margin-left: 15%;
-  width: 6rem;
-  padding: .8rem;
+  display: inline-block;
+  margin-left: 10%;
+  width: 4rem;
   border: 1px solid #ECF0F1;
-  color: #ECF0F1;
+}
+
+.logo a {
+  display: block;
+  width: 100%;
+  padding: .4rem;
+  text-decoration: none;
   text-align: center;
-  font-size: 1rem;
+  font-size: .8rem;
+  color: #ECF0F1;
 }
 
 
@@ -112,7 +119,7 @@ h1,p,fieldset{
 /*버튼 */
 
 .signup_btn, .signup_btn_fb {
-  width: 14rem;
+  width: 10rem;
   margin: 0 auto;
   padding: 1rem 0;
   display: block;
