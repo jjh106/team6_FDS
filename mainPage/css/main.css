@@ -36,7 +36,7 @@ ul {
 
 /*컨테이너*/
 .main_container {
-  background-image: url(../images/main_bg.jpg);
+  background-image: url(../images/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -49,7 +49,6 @@ ul {
 /*전체 섹션 공통*/
 .section {
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
 }
 
 .section h2 {
@@ -82,7 +81,7 @@ ul {
 
 .shop_list li {
   width: 32%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(46, 46, 46, 0.85);
   border-radius: 2px;
 }
 
@@ -263,14 +262,73 @@ ul {
 }
 
 .management_tip_list li {
-  width: 32%;
+  width: 30%;
+  margin: 1% 0;
 }
 
 .management_tip_list li a {
+  border-left: 1px solid #e74c3c;
+  border-right: 1px solid #e74c3c;
+  border-radius: 15px;
+  transition: all .5s ease-in-out;
   display: block;
   text-align: center;
+  text-decoration: none;
   width: 100%;
   margin: .5rem 0;
-  padding: 3rem;
-  background: #ccc;
+  padding: 2rem 0;
+  color: #ECF0F1;
+}
+
+.management_tip_list li a:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+
+/*컨택트*/
+
+.contact {
+  background: rgba(44, 62, 80, 0.9);
+}
+
+.contact_wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.map {
+  width: 49%;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+
+.contact_info {
+  width: 49%;
+  background: rgba(46, 46, 46, 0.85);
+}
+
+.contact_info span {
+  display: block;
+  font-size: 1.1rem;
+  padding: 1rem .5rem;
+  color: #ECF0F1;
+}
+
+.contact_info span i,
+.contact_info span i,
+.contact_info span i {
+  margin-right: .5rem;
+  color: #e74c3c;
+}
+.contact_info span:nth-child(2) {
+  margin-top: 1rem;
 }
