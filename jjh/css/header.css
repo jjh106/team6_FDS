@@ -38,10 +38,10 @@ html {
 
 .main_menu li a {
   display: inline-block;
-  width: 100%;
+  width: 60%;
   padding: .5rem 0;
   text-decoration: none;
-  color: #ddd;
+  color: #ecf0f1;
   font-size: .9rem;
   transition: all .3s ease-in-out;
   position: relative;
@@ -53,33 +53,33 @@ html {
   transition: all .5s ease-in-out;
   height: 3px;
   bottom: 0;
-  left: 0;
-  right: 100%;
-  background: #E74C3C;
+  left: 50%;
+  right: 50%;
+  background: #ecf0f1;
 }
 .main_menu li a:hover::after {
   right: 0;
+  left: 0;
 }
 
 /* 로고 */
-/*.logo {
+.logo {
   display: inline-block;
   margin-left: 10%;
-  width: 6rem;
   padding: .8rem;
   border: 1px solid #ECF0F1;
   color: #ECF0F1;
   text-align: center;
   font-size: 1rem;
-}*/
+}
 
-.logo {
-  position: absolute;
-  top: 20%;
-  left: 48%;
+/*.logo {*/
+  /*position: absolute;*/
+  /*top: 150px;*/
+  /*left: 750px;*/
   /*border: 3px solid #E74C3C;
   padding: 0.5rem 0.5rem 0.1rem 0.5rem;*/
-}
+/*}*/
 
 /*버튼*/
 .my_page_btn,
@@ -116,13 +116,14 @@ html {
   transition: all .5s ease-in-out;
   height: 3px;
   bottom: 0;
-  left: 0;
-  right: 100%;
-  background: #E74C3C;
+  left: 50%;
+  right: 50%;
+  background: #ecf0f1;
 }
 .my_page_btn:hover::after,
 .register_company_btn:hover::after {
   right: 0;
+  left: 0;
 }
 /*검색폼*/
 .search_region_form {
