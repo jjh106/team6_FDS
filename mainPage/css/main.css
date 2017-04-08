@@ -16,7 +16,7 @@ body {
   height: auto;
 }
 /*기본값 초기화*/
-h1,h2,h3,p,ul,li,form,input{
+h1,h2,h3,p,ul,li,form,input,hr{
   margin: 0;
   padding: 0;
 }
@@ -267,8 +267,8 @@ ul {
 }
 
 .management_tip_list li a {
-  border-left: 1px solid #e74c3c;
-  border-right: 1px solid #e74c3c;
+  border-left: 2px solid #e74c3c;
+  border-right: 2px solid #e74c3c;
   border-radius: 15px;
   transition: all .5s ease-in-out;
   display: block;
@@ -302,8 +302,10 @@ ul {
   justify-content: space-between;
 }
 
-.map {
+.map,
+.contact_info {
   width: 49%;
+  border-radius: 2px;
 }
 
 .map iframe {
@@ -312,7 +314,6 @@ ul {
 
 
 .contact_info {
-  width: 49%;
   background: rgba(46, 46, 46, 0.85);
 }
 

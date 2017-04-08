@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../common_css/normalize.css">
-  <!-- <link rel="stylesheet" href="../common_css/animation.css"> -->
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="../responsive/responsive.css">
   <link rel="stylesheet" href="../css_modules/modal.css">
   <script src="https://use.fontawesome.com/2d53fe48ad.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <title>KarDoc 자동차 수리업체 검색 서비스</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
   <div class="page_wrapper">
     <!-- 헤더 -->
     <header class="main_header">
-      <nav class="nav_top">
+      <nav class="nav_top clearfix">
         <h1 class="logo">
           <a href="">
             <img src="images/logo_6.png" alt="로고">
@@ -26,6 +27,18 @@
         </h1>
         <a class="my_page_btn" href="#" role="button">마이페이지</a>
         <a class="register_company_btn" href="../register_company/register_company.html" role="button">입점신청</a>
+        <!-- 모바일뷰 메뉴리스트 -->
+        <a class="burger_bar" href="#">
+          <i class="fa fa-align-justify" aria-hidden="true"></i>
+          <ul class="mb_main_menu">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">입점신청</a></li>
+            <li><a href="">업체검색</a></li>
+            <li><a href="">견적요청</a></li>
+            <li><a href="">수리사례</a></li>
+            <li><a href="">차량관리팁</a></li>
+          </ul>
+        </a>
       </nav>
       <form class="search_region_form" action="">
         <p>언제 어디서든 믿고 수리하세요!</p>
@@ -149,10 +162,8 @@
             </div>
             <div class="contact_info">
               <span><i class="fa fa-map-marker" aria-hidden="true"></i> 4F, Geumwon building, Jamwon-dong 8-12, Seocho-gu, Seoul, South Korea</span>
-              <br>
               <hr>
               <span><i class="fa fa-phone" aria-hidden="true"></i> 010-9263-6925</span>
-              <br>
               <hr>
               <span><i class="fa fa-envelope" aria-hidden="true"></i>master@KarDoc.co.kr</span>
             </div>
@@ -170,8 +181,8 @@
         <li><a href="">copyright</a></li>
         <li><a href="">contact</a></li>
       </ul>
-      <hr>
       <a class="footer_logo " href=""><img src="images/logo_6.png" alt="로고"></a>
+      <hr>
       <p class="footer_copyright">ⓒ 2017 KarDoc. All rights reserved.</p>
       <ul class="footer_sns_list">
         <li><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
