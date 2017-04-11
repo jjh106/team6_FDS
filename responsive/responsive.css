@@ -50,7 +50,6 @@
 
   /*메인 컨테이너*/
 
-  .shop_list,
   .after_repair_list,
   .management_tip_list,
   .contact_wrapper {
@@ -61,27 +60,27 @@
   /*주요공업사 리스트*/
 
   .featured_shop {
-    margin-top: 44px;
-    padding-bottom: .5rem;
-  }
-
-  .shop_list li {
     width: 100%;
+    top: 44px;
+    padding-bottom: 2rem;
+
+  }
+  .shop_list {
+    width: 25%;
+  }
+  .shop_list li {
+    width: 90%;
+    margin: 0 auto;
   }
 
   .shop_list li:nth-child(2),
-  .shop_list li:nth-child(3) {
+  .shop_list li:nth-child(3),
+  .shop_list li:nth-child(4) {
     display: none;
   }
 
-  .swiper_pagination {
-    padding-bottom: .5rem;
-  }
-
-  .swiper_pagination_bullet {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  .carousel-pagination {
+    bottom: 50px;
   }
 
   /*수리사례*/
