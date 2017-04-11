@@ -15,9 +15,3 @@ function closeModalWindow() {
   console.log('clicked close modal');
   modal_window.style.display = 'none';
 }
-
-var selected_region = document.getElementsByName('li').length;
-
-for( var i = 0; i < selected_region; i++ ) {
-  console.log(selected_region);
-}

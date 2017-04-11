@@ -42,27 +42,36 @@ h1,p{
 }
 
 /*로그인 페이지 헤더*/
-.login_page_header {
-  background: rgba(44, 62, 80, 0.90);
-  padding: .5rem 0;
-}
 
 /* 로고 */
 .logo {
+  z-index: 100;
   display: inline-block;
   margin-left: 10%;
-  width: 4rem;
-  border: 1px solid #ECF0F1;
+  width: 5rem;
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  background: #e0685c;
+  top: -12px;
+  transition: all .5s ease-in-out;
+}
+
+.logo:hover {
+  top: 0;
+  background: #E74C3C;
 }
 
 .logo a {
   display: block;
   width: 100%;
-  padding: .4rem;
-  text-decoration: none;
-  text-align: center;
-  font-size: .8rem;
-  color: #ECF0F1;
+  padding: 1rem;
+}
+
+
+.logo a img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 
