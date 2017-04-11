@@ -48,6 +48,10 @@
 
 
 
+
+
+
+
   /*메인 컨테이너*/
 
   .after_repair_list,
@@ -130,6 +134,9 @@
     padding: .5rem;
     font-size: 1rem;
   }
+
+
+
 
   /*푸터*/
   .footer_link {

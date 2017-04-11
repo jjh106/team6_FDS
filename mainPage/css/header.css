@@ -78,8 +78,17 @@
 /*메인메뉴*/
 
 .gnb {
-  background: #2C3E50;
+  background: rgba(24, 24, 24, 0.9);
   padding: 2px 0;
+}
+
+/*스크롤 이벤트*/
+.gnb_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .main_menu {
