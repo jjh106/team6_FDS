@@ -1,4 +1,4 @@
-
+// 변수선언
 var carousel = document.querySelector('.carousel');
 var container = carousel.querySelector('.carousel-container');
 var pagination = carousel.querySelector('.carousel-pagination');
@@ -14,7 +14,7 @@ function next(){
 function prev(){
     slideTo(currentIndex - 1);
 }
-
+// 슬라이드
 function slideTo(index){
     index = index < 0 ? totalItems - 1 : index >= totalItems ? 0 : index;
     container.style.WebkitTransform = container.style.transform = 'translate(-' + (index * percent) + '%, 0)';
@@ -22,7 +22,7 @@ function slideTo(index){
     bullets[index].classList.add('active-bullet');
     currentIndex = index;
 }
-
+// 슬라이드 좌우버튼, 슬라이드 뷰렛
 bullets[currentIndex].classList.add('active-bullet');
 carousel.querySelector('.carousel-prev').addEventListener('click', prev, false);
 carousel.querySelector('.carousel-next').addEventListener('click', next, false);

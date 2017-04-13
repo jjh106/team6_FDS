@@ -1,4 +1,4 @@
-
+// 변수선언
 var modal_btn = document.querySelector('.modal_btn')
 var modal_window = document.querySelector('.modal_dim');
 var modal_close_btn = document.querySelector('.modal_close_btn');

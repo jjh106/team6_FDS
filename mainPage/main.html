@@ -23,13 +23,13 @@
       <nav class="nav_top clearfix">
         <h1 class="logo">
           <a href="">
-            <img src="images/logo_6.png" alt="로고">
+            <img src="images/kardoc.png" alt="로고">
           </a>
         </h1>
         <a class="my_page_btn" href="#" role="button">마이페이지</a>
         <a class="register_company_btn" href="../register_company/register_company.html" role="button">입점신청</a>
         <!-- 모바일뷰 메뉴리스트 -->
-        <a class="burger_bar" href="#" role="menubar" onclick="$('.mb_main_menu').stop().toggle(300)">
+        <a class="burger_bar" href="#" role="button" onclick="$('.mb_main_menu').stop().toggle(300)">
           <i class="fa fa-align-justify" aria-hidden="true"></i>
         </a>
         <ul class="mb_main_menu">
@@ -63,14 +63,6 @@
         <!-- 캐러셀 영역 -->
         <div class="featured_shop carousel">
           <h2>Featured Shop</h2>
-          <div class="carousel-prev" role="button"></div>
-          <div class="carousel-next" role="button"></div>
-          <ul class="carousel-pagination">
-            <li class="carousel-bullet"></li>
-            <li class="carousel-bullet"></li>
-            <li class="carousel-bullet"></li>
-            <li class="carousel-bullet"></li>
-          </ul>
           <div class=" carousel-container">
             <ul class="shop_list carousel-item">
               <li>
@@ -213,6 +205,14 @@
               </li>
             </ul>
           </div>
+          <div class="carousel-prev" role="button"></div>
+          <div class="carousel-next" role="button"></div>
+          <ul class="carousel-pagination">
+            <li class="carousel-bullet"></li>
+            <li class="carousel-bullet"></li>
+            <li class="carousel-bullet"></li>
+            <li class="carousel-bullet"></li>
+          </ul>
         </div>
       </section>
 
@@ -260,6 +260,9 @@
             <li><a href="">Tip of car management</a></li>
             <li><a href="">Tip of car management</a></li>
             <li><a href="">Tip of car management</a></li>
+            <li><a href="">Tip of car management</a></li>
+            <li><a href="">Tip of car management</a></li>
+            <li><a href="">Tip of car management</a></li>
           </ul>
         </div>
       </section>
@@ -274,9 +277,7 @@
             </div>
             <div class="contact_info">
               <span><i class="fa fa-map-marker" aria-hidden="true"></i> 4F, Geumwon building, Jamwon-dong 8-12, Seocho-gu, Seoul, South Korea</span>
-              <hr>
               <span><i class="fa fa-phone" aria-hidden="true"></i> 010-9263-6925</span>
-              <hr>
               <span><i class="fa fa-envelope" aria-hidden="true"></i>master@KarDoc.co.kr</span>
             </div>
           </div>
@@ -286,7 +287,6 @@
     </main>
     <!-- 푸터 -->
     <footer class="footer">
-      <a class="footer_logo " href=""><img src="images/logo_6.png" alt="로고"></a>
       <ul class="footer_link">
         <li><a href="">information</a></li>
         <li><a href="">help</a></li>
@@ -294,7 +294,6 @@
         <li><a href="">copyright</a></li>
         <li><a href="">contact</a></li>
       </ul>
-      <hr>
       <p class="footer_copyright">ⓒ 2017 KarDoc. All rights reserved.</p>
       <ul class="footer_sns_list">
         <li><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
@@ -304,6 +303,8 @@
       </ul>
     </footer>
   </div>
+
+
   <!-- 모달 -->
   <div class="modal_dim">
     <div class="modal_window">
@@ -329,36 +330,67 @@
       </ul>
     </div>
   </div>
+
+
+
   <!-- 스크립트 -->
   <script src="js/modal.js"></script>
   <script src="js/carousel.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
   <script type="text/javascript">
 
-  //네비게이션
-  // $('.main_menu li:eq(0)').click(function(evt){
-  //     console.log("go top");
-  //     evt.preventDefault();
-  //     $('html,body').animate({scrollTop:0},700);
-  // });
-  //
-  // $('.main_menu li:eq(4)').click(function(evt){
-  //     console.log("go bottom");
-  //     evt.preventDefault();
-  //     var $target = $('html,body');
-  //     $target.animate({scrollTop: $target.height()},700);
-  // });
+  // 네비게이션 섹션위치 찾아가기
+  $('.main_menu li:eq(0)').click(function(evt){
+      console.log("go search");
+      evt.preventDefault();
+      $('html,body').animate({scrollTop:0},500,'easeInOutBack');
+  });
+  $('.main_menu li:eq(1)').click(function(evt){
+      console.log("go featured shop");
+      evt.preventDefault();
+      var $target = $('.section:eq(0)');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInOutBack');
+  });
+  $('.main_menu li:eq(2)').click(function(evt){
+      console.log("go after repaired");
+      evt.preventDefault();
+      var $target = $('.section:eq(1)');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInOutBack');
+  });
+  $('.main_menu li:eq(3)').click(function(evt){
+      console.log("go management tips");
+      evt.preventDefault();
+      var $target = $('.section:eq(2)')
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInOutBack');
+  });
+  $('.main_menu li:eq(4)').click(function(evt){
+      console.log("go bottom");
+      evt.preventDefault();
+      var $target = $('section:eq(3)');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInOutBack');
+  });
+
+
+  // 모바일 메뉴바토글
+  $(window).resize(function (){
+    var width_size = window.outerWidth;
+    if (width_size >= 640) {
+      $('.mb_main_menu').css('display', 'none');
+    }
+  })
+
 
   //네비게이션바 고정
   $( document ).ready( function() {
-        var fixedGnb = $( '.gnb' ).offset();
-        $( window ).scroll( function() {
-          if ( $( document ).scrollTop() > fixedGnb.top ) {
-            $( '.gnb' ).addClass( 'gnb_fixed' );
-          }
-          else {
-            $( '.gnb' ).removeClass( 'gnb_fixed' );
-          }
-        });
+    var fixedGnb = $( '.gnb' ).offset();
+    $( window ).scroll( function() {
+      if ( $( document ).scrollTop() > fixedGnb.top ) {
+        $( '.gnb' ).addClass( 'gnb_fixed' );
+      }
+      else {
+        $( '.gnb' ).removeClass( 'gnb_fixed' );
+      }
+    });
   } );
   </script>
 </body>

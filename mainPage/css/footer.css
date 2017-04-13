@@ -1,7 +1,7 @@
 .footer {
   background: rgba(0, 0, 0, 0.85);
   position: relative;
-  padding: 2rem 0;
+  padding: 3.5rem 0;
 }
 
 .footer_link {
@@ -26,26 +26,11 @@
   font-size: .9rem;
 }
 
-.footer_logo {
-  position: absolute;
-  top: -10px;
-  left: 10%;
-  width: 3rem;
-  background: #e0685c;
-  border-radius: 2px;
-  padding: .5rem;
-}
-
-.footer_logo img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .footer_copyright {
   text-align: center;
   font-size: .9rem;
   padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   letter-spacing: 1.2px;
   color: #34a77b;
 }
@@ -54,7 +39,7 @@
   width: 20%;
   margin: 0 auto;
   display: flex;
-  padding-top: .5rem;
+  padding-top: 1.5rem;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;

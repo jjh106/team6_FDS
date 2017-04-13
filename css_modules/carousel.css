@@ -46,7 +46,7 @@
 }
 
 .carousel-prev {
-    left: 0;
+    left: 2%;
     padding-right: 3px;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .carousel-next {
-    right: 0;
+    right: 2%;
     padding-left: 3px;
 }
 

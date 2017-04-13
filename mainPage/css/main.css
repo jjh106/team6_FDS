@@ -36,6 +36,7 @@ ul {
 
 /*컨테이너*/
 .main_container {
+  background: #fff;
   background-image: url(../images/container_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,17 +50,14 @@ ul {
 /*전체 섹션 공통*/
 .section {
   width: 100%;
+  padding: 3.5rem 0;
 }
 
 .section h2 {
-  display: inline-block;
-  margin-left: 10%;
-  margin-bottom: 1rem;
-  text-align: left;
+  text-align: center;
   font-size: 1.4rem;
   color: #ECF0F1;
-  padding: 2rem 0 .5rem;
-  border-bottom: 2px solid #ECF0F1;
+  padding: 1.5rem 0;
 }
 
 
@@ -78,8 +76,8 @@ ul {
   width: 32%;
   background: rgba(46, 46, 46, 0.85);
   border: 1px solid #3c3c3c;
-  border-radius: 2px;
-  box-shadow: 0px 8px 6px -4px #000;
+  border-radius: 3px;
+  box-shadow: 0px 8px 6px -6px #000;
   overflow: hidden;
 }
 
@@ -123,7 +121,7 @@ ul {
 
 /*수리사례*/
 
-.after_repair {
+.section:nth-child(2) {
   background: rgba(44, 62, 80, 0.7);
 }
 
@@ -140,6 +138,8 @@ ul {
 .after_repair_list li {
   margin-bottom: 1%;
   overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0px 8px 6px -6px #000;
 }
 
 .after_repair_list li:nth-child(1),
@@ -167,7 +167,6 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: border-box;
-  border-radius: 2px;
   transition: all .5s ease-in-out;
 }
 
@@ -236,12 +235,12 @@ ul {
 
 .management_tip_list li {
   width: 30%;
-  margin: 1% 0;
+  margin: 2% 0;
 }
 
 .management_tip_list li a {
-  border-left: 2px solid #e74c3c;
-  border-right: 2px solid #e74c3c;
+  border-left: 3px solid #e74c3c;
+  border-right: 3px solid #e74c3c;
   border-radius: 15px;
   transition: all .5s ease-in-out;
   display: block;
@@ -249,7 +248,7 @@ ul {
   text-decoration: none;
   width: 100%;
   margin: .5rem 0;
-  padding: 2rem 0;
+  padding: 2rem .5rem;
   color: #ECF0F1;
 }
 
@@ -261,7 +260,7 @@ ul {
 
 /*컨택트*/
 
-.contact {
+.section:nth-child(4) {
   background: rgba(44, 62, 80, 0.7);
 }
 
@@ -292,9 +291,17 @@ ul {
 
 .contact_info span {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding: 1rem .5rem;
   color: #ECF0F1;
+}
+
+.contact_info span::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: .5rem;
 }
 
 .contact_info span i,
@@ -302,7 +309,4 @@ ul {
 .contact_info span i {
   margin-right: .5rem;
   color: #e74c3c;
-}
-.contact_info span:nth-child(2) {
-  margin-top: 1rem;
 }

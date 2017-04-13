@@ -1,3 +1,12 @@
+@keyframes runingCar {
+  0% {left: -6rem;}
+  85& {transform: rotate(10deg);}
+  90% {transform: rotate(15deg);}
+  95% {transform: rotate(20deg);}
+  100% {left: 20%;}
+}
+
+
 
 /*헤더 영역*/
 .main_header{
@@ -11,34 +20,35 @@
 
 /*네비게이션 탑*/
 .nav_top {
-  position: relative;
   z-index: 100;
 }
 
 /* 로고 */
 .logo {
   z-index: 100;
-  display: inline-block;
-  margin-left: 10%;
-  width: 5rem;
-  border-radius: 0 0 4px 4px;
+  width: 6rem;
+  height: 6rem;
   position: absolute;
-  background: #e0685c;
-  top: -12px;
-  transition: all .5s ease-in-out;
+  top: 28%;
+  left: -6rem;
+  animation-name: runingCar;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
-.logo:hover {
-  top: 0;
-  background: #E74C3C;
+.logo a:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .logo a {
   display: block;
   width: 100%;
   padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  transition: all .5s ease-in-out;
 }
-
 
 .logo a img {
   display: block;
@@ -50,7 +60,7 @@
 .my_page_btn,
 .register_company_btn {
   width: 5rem;
-  padding: .6rem 0;
+  padding: 2rem 0 .5rem 0;
   float: right;
   text-align: center;
   text-decoration: none;
@@ -78,7 +88,7 @@
 /*메인메뉴*/
 
 .gnb {
-  background: rgba(24, 24, 24, 0.9);
+  background: rgba(24, 24, 24, 0.4);
   padding: 2px 0;
 }
 
@@ -89,6 +99,7 @@
   left: 0;
   right: 0;
   z-index: 100;
+  background: rgba(24, 24, 24, 0.9)
 }
 
 .main_menu {
@@ -106,7 +117,7 @@
 
 .main_menu li a {
   display: block;
-  width: 60%;
+  width: 100%;
   padding: .5rem 0;
   text-decoration: none;
   white-space: nowrap;
@@ -152,8 +163,8 @@
 .register_company_btn::after {
   content: '';
   position: absolute;
-  transition: all .2s ease-in-out;
-  height: 3px;
+  transition: all .3s ease-in-out;
+  height: 2px;
   bottom: 0;
   left: 50%;
   right: 50%;
@@ -162,8 +173,8 @@
 .main_menu li a:hover::after,
 .my_page_btn:hover::after,
 .register_company_btn:hover::after {
-  right: 0;
-  left: 0;
+  right: 15%;
+  left: 15%;
 }
 
 
