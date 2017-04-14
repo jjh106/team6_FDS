@@ -1,6 +1,6 @@
 <template>
 	<div class="gu_wrapper">
-		<button v-for="gu in seoul">{{gu.value}}</button>
+		<button v-for="gu in seoul" @click="$emit('selectOk')">{{gu.value}}</button>
 	</div>
 </template>
 
@@ -59,5 +59,10 @@ export default {
 		margin: 0;
 		padding: .5rem;
 		background: #fff;
+		cursor: pointer;
+	}
+	button:focus {
+		background-color: #2c3e50;
+		color: #ecf0f1;
 	}
 </style>

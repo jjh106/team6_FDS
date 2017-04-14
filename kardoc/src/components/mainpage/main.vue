@@ -2,59 +2,158 @@
 <main class="main_container">
       <!-- 섹션 대표공업사 나열 -->
       <section class="section">
-        <div class="featured_shop">
+        <div class="featured_shop carousel">
           <h2>Featured Shop</h2>
-          <carousel>
-            <carousel-slide>
-              <img src="http://lorempicsum.com/futurama/630/300/1" width="50%">
-            </carousel-slide>
-            <carousel-slide>
-              <img src="http://lorempicsum.com/futurama/630/300/1" width="50%">
-            </carousel-slide>
-            <carousel-slide>
-              <img src="http://lorempicsum.com/futurama/630/300/1" width="50%">
-            </carousel-slide>
-          </carousel>
-          <ul class="shop_list">
-            <li>
-              <a href="#">
-                <div class="company_img">
-                  <img src="../../assets/images/workshop.jpg" alt="공업사">
-                </div>
-                <div class="company_desc">
-                  <h3>company name</h3>
-                  <p>address</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="company_img">
-                  <img src="../../assets/images/workshop.jpg" alt="공업사">
-                </div>
-                <div class="company_desc">
-                  <h3>company name</h3>
-                  <p>address</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="company_img">
-                  <img src="../../assets/images/workshop.jpg" alt="공업사">
-                </div>
-                <div class="company_desc">
-                  <h3>company name</h3>
-                  <p>address</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="swiper_pagination">
-            <span class="swiper_pagination_bullet bullet_active"></span>
-            <span class="swiper_pagination_bullet"></span>
-            <span class="swiper_pagination_bullet"></span>
+          <div class=" carousel-container">
+            <ul class="shop_list carousel-item">
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="shop_list carousel-item">
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="shop_list carousel-item">
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="shop_list carousel-item">
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
+          <div class="carousel-prev" role="button"></div>
+          <div class="carousel-next" role="button"></div>
+          <ul class="carousel-pagination">
+            <li class="carousel-bullet"></li>
+            <li class="carousel-bullet"></li>
+            <li class="carousel-bullet"></li>
+            <li class="carousel-bullet"></li>
+          </ul>
         </div>
       </section>
 
@@ -145,14 +244,8 @@
 </template>
 
 <script>
-import Carousel from './Carousel.vue'
-import CarouselSlide from './CarouselSlide.vue'
 
 export default {
-  components: {
-    Carousel,
-    CarouselSlide
-  },
   name: 'main_container',
   data() {
     return {
@@ -257,6 +350,9 @@ export default {
 }
 
 /*수리사례*/
+.after_repair {
+  background: rgba(44, 62, 80, 0.8);
+}
 .after_repair_list {
   width: 70%;
   margin: 0 auto;
@@ -335,48 +431,6 @@ export default {
   right: 0;
   background: rgba(0, 0, 0, 0.2);
 }
-/*.repair_content_1 {
-  width: 70%;
-  height: 250px;
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  margin: 0 auto 2.5%;
-}
-.repair_content_2 {
-  width: 70%;
-  height: 250px;
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  margin: 0 auto;
-}
-.small_box_1 {
-  background-image: url(../images/k-020.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 31.3333%;
-}
-.big_box_1 {
-  background-image: url(../images/k-022.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 65.6666%;
-  margin: 0 0 0 3%;
-}
-.small_box_2 {
-  background-image: url(../images/k-023.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 31.3333%;
-  margin: 0 0 0 3%; 
-}
-.big_box_2 {
-  background-image: url(../images/k-021.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 65.6666%;
-}*/
 
 /*차량관리 팁*/
 .management_tip_list {
@@ -444,6 +498,9 @@ export default {
 }
 
 /* contact us */
+.section:last-child {
+  background: rgba(44, 62, 80, 0.9);
+}
 .contact {
   width: 70%;
   margin: 0 auto;

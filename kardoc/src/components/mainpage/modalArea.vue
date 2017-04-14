@@ -24,7 +24,7 @@
         <li class="region"><button type="button">전라남도</button></li>
         <li class="region"><button type="button">세종시</button></li>
       </ul>
-			<button type="button" class="ok_btn">선택완료부분</button>
+			<button type="button" class="ok_btn" @selectOk="transText">{{button_text}}</button>
     </div>
   </div>
 </template>
@@ -40,13 +40,17 @@ export default {
 	},
   data() {
     return {
-			is_show_gu: true
+			is_show_gu: true,
+      button_text: "지역을 선택해주세요"
     }
   },
 	methods: {
 		showGu() {
 			this.is_show_gu = !this.is_show_gu;
-		}
+		},
+    transText() {
+      this.button_text = "선택완료"
+    }
 	}
 }
 </script>
@@ -129,6 +133,7 @@ export default {
   display: block;
   transition: all .5s ease-in-out;
 	border: none;
+  cursor: pointer;
 }
 .region button:focus  {
   background: #34a77b;

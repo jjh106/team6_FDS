@@ -61,6 +61,37 @@ export default {
     hideModal() {
       this.is_show_modal = false;
     }
+  },
+  mounted() {
+    $('.main_menu li:eq(0)').click(function(evt){
+      console.log("go search");
+      evt.preventDefault();
+      $('html,body').animate({scrollTop:0},500,'easeInCubic');
+  });
+  $('.main_menu li:eq(1)').click(function(evt){
+      console.log("go featured shop");
+      evt.preventDefault();
+      var $target = $('.section:eq(0)');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
+  });
+  $('.main_menu li:eq(2)').click(function(evt){
+      console.log("go after repaired");
+      evt.preventDefault();
+      var $target = $('.section:eq(1)');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
+  });
+  $('.main_menu li:eq(3)').click(function(evt){
+      console.log("go management tips");
+      evt.preventDefault();
+      var $target = $('.section:eq(2)')
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
+  });
+  $('.main_menu li:eq(4)').click(function(evt){
+      console.log("go bottom");
+      evt.preventDefault();
+      var $target = $('section:eq(3)');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
+  });
   }
 }
 </script>
@@ -74,16 +105,28 @@ export default {
   background-size: cover;
 }
 /* 로고 */
+@keyframes runingCar {
+  0% {left: -6rem;}
+  85% {transform: rotate(10deg);}
+  90% {transform: rotate(15deg);}
+  95% {transform: rotate(20deg);}
+  100% {left: 20%;}
+}
+
 .logo {
-  background: #ecf0f1;
   display: inline-block;
-  margin-left: 10%;
+  margin-left: -5%;
   width: 8rem;
   border-radius: 0 0 5px 5px;
+  border: none;
   position: absolute;
   top: -15px;
   transition: all .5s;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  animation-name: runingCar;
+  animation-iteration-count: 1;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 .logo:hover {
   top: 0;
