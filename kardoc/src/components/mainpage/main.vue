@@ -4,6 +4,17 @@
       <section class="section">
         <div class="featured_shop">
           <h2>Featured Shop</h2>
+          <carousel>
+            <carousel-slide>
+              <img src="http://lorempicsum.com/futurama/630/300/1" width="50%">
+            </carousel-slide>
+            <carousel-slide>
+              <img src="http://lorempicsum.com/futurama/630/300/1" width="50%">
+            </carousel-slide>
+            <carousel-slide>
+              <img src="http://lorempicsum.com/futurama/630/300/1" width="50%">
+            </carousel-slide>
+          </carousel>
           <ul class="shop_list">
             <li>
               <a href="#">
@@ -134,8 +145,14 @@
 </template>
 
 <script>
+import Carousel from './Carousel.vue'
+import CarouselSlide from './CarouselSlide.vue'
 
 export default {
+  components: {
+    Carousel,
+    CarouselSlide
+  },
   name: 'main_container',
   data() {
     return {

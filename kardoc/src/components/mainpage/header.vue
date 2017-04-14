@@ -76,7 +76,6 @@ export default {
 /* 로고 */
 .logo {
   background: #ecf0f1;
-  z-index: 100;
   display: inline-block;
   margin-left: 10%;
   width: 8rem;
@@ -103,7 +102,6 @@ export default {
 /* 탑 네비게이션 */
 .nav_top {
   position: relative;
-  z-index: 100;
 }
 
 /* 마이페이지, 입점신청 */
@@ -172,10 +170,10 @@ export default {
   width: 60%;
   margin: 0 auto;
   text-align: center;
-  padding: 10rem 0 5rem 0;
+  padding: 10rem 0 4rem 0;
 }
 .search_region_form p {
-  padding: 5rem 0 1rem 0;
+  padding: 5rem 0 2rem 0;
   color: #ecf0f1;
   font-weight: 700;
   font-size: 1.5rem;
@@ -244,7 +242,7 @@ export default {
 .main_menu li a {
   display: inline-block;
   width: 60%;
-  padding: .5rem 0;
+  padding: .3rem 0;
   text-decoration: none;
   white-space: nowrap;
   color: #ecf0f1;

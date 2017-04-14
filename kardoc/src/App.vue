@@ -10,7 +10,7 @@ import intro from './components/intro.vue';
 export default {
   name: 'app',
   components: {
-    intro: intro
+    intro
   },
   data() {
     return {

@@ -49,13 +49,15 @@ export default {
 		width: 100%;
 		display: flex;
 		flex-flow: row wrap;
-		background: #ecf0f1;
+		background: #fff;
+		border: 1px solid #ecf0f1;
 	}
 	button {
 		width: 25%;
 		height: auto;
-		border: 1px solid #fff;
+		border: 1px solid #ecf0f1;
 		margin: 0;
-		background: #ecf0f1;
+		padding: .5rem;
+		background: #fff;
 	}
 </style>

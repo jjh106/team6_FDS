@@ -29,15 +29,6 @@ export default {
     return {
 
     }
-  },
-  methods: {
-    LogIn() {
-      let id = document.querySelector('#login_id');
-      let pwd = document.querySelector('#login_pwd');
-      let login_data = {
-
-      } 
-    }
   }
 }
 </script>
