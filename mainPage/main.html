@@ -332,7 +332,6 @@
   </div>
 
 
-
   <!-- 스크립트 -->
   <script src="js/modal.js"></script>
   <script src="js/carousel.js"></script>
@@ -343,31 +342,31 @@
   $('.main_menu li:eq(0)').click(function(evt){
       console.log("go search");
       evt.preventDefault();
-      $('html,body').animate({scrollTop:0},500,'easeInOutBack');
+      $('html,body').animate({scrollTop:0},500,'easeInCubic');
   });
   $('.main_menu li:eq(1)').click(function(evt){
       console.log("go featured shop");
       evt.preventDefault();
       var $target = $('.section:eq(0)');
-      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInOutBack');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
   });
   $('.main_menu li:eq(2)').click(function(evt){
       console.log("go after repaired");
       evt.preventDefault();
       var $target = $('.section:eq(1)');
-      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInOutBack');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
   });
   $('.main_menu li:eq(3)').click(function(evt){
       console.log("go management tips");
       evt.preventDefault();
       var $target = $('.section:eq(2)')
-      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInOutBack');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
   });
   $('.main_menu li:eq(4)').click(function(evt){
       console.log("go bottom");
       evt.preventDefault();
       var $target = $('section:eq(3)');
-      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInOutBack');
+      $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
   });
 
 
