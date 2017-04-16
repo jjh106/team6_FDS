@@ -63,6 +63,18 @@ export default {
     }
   },
   mounted() {
+    $( document ).ready( function() {
+        var fixedGnb = $( '.gnb' ).offset();
+        $( window ).scroll( function() {
+          if ( $( document ).scrollTop() > fixedGnb.top ) {
+            $( '.gnb' ).addClass( 'gnb_fixed' );
+          }
+          else {
+            $( '.gnb' ).removeClass( 'gnb_fixed' );
+          }
+        });
+  });
+  
     $('.main_menu li:eq(0)').click(function(evt){
       console.log("go search");
       evt.preventDefault();

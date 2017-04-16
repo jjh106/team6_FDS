@@ -9,7 +9,7 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="업체">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -20,7 +20,7 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -31,42 +31,7 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
-                  </div>
-                  <div class="company_desc">
-                    <h3>company name</h3>
-                    <p>address</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <ul class="shop_list carousel-item">
-              <li>
-                <a href="#">
-                  <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
-                  </div>
-                  <div class="company_desc">
-                    <h3>company name</h3>
-                    <p>address</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
-                  </div>
-                  <div class="company_desc">
-                    <h3>company name</h3>
-                    <p>address</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -79,7 +44,7 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -90,7 +55,7 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -101,7 +66,7 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -114,7 +79,7 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -125,7 +90,7 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -136,7 +101,42 @@
               <li>
                 <a href="#">
                   <div class="company_img">
-                    <img src="images/workshop.jpg" alt="공업사 이미지">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="shop_list carousel-item">
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
+                  </div>
+                  <div class="company_desc">
+                    <h3>company name</h3>
+                    <p>address</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="company_img">
+                    <img src="../../assets/images/workshop.jpg" alt="공업사">
                   </div>
                   <div class="company_desc">
                     <h3>company name</h3>
@@ -270,6 +270,7 @@ export default {
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
+  padding: 3rem 0;
 }
 .section h2 {
   position: relative;
@@ -277,8 +278,7 @@ export default {
   font-size: 1.9rem;
   font-weight: 900;
   color: #ECF0F1;
-  padding: 3rem 0 .5rem 0;
-  margin-bottom: 1rem;
+  padding: 1.5rem 0 0 0;
   border-bottom: 3px solid #ECF0F1;
 }
 
@@ -287,22 +287,23 @@ export default {
   width: 100%;
 }
 .shop_list {
-  width: 70%;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 2rem 0 3rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 .shop_list li {
   width: 32%;
-  margin-bottom: 2.5%;
+  background: rgba(46, 46, 46, 0.85);
+  box-shadow: 0px 8px 6px -6px #000;
   border: none;
-  background: rgba(44, 62, 80, 0.8);
+  overflow: hidden;
 }
 .shop_list li a {
   display: block;
   width: 100%;
+  height: auto;
   text-decoration: none;
   color: #ECF0F1;
 }
@@ -330,33 +331,116 @@ export default {
 .company_desc p {
   padding: .5rem 0;
 }
-.swiper_pagination {
-  width: 100%;
-  padding-bottom: 1rem;
-  text-align: center;
+/* 캐러셀 */ 
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
 }
-.swiper_pagination_bullet {
-  display: inline-block;
-  width: 2.5rem;
-  height: 6px;
-  margin: 0 .5rem;
-  background: #999;
-  border-radius: 0 0 2px 2px;
-  opacity: 1;
-  cursor: pointer;
+.carousel-container {
+    overflow: hidden;
+    margin: 0;
+    width: 400%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: transform 0.3s cubic-bezier(.694, .0482, .335, 1);
 }
-.bullet_active {
-  background: #ECF0F1;
+.carousel-item {
+    position: relative;
+    width: 22.5%;
+    margin: 0 auto;
+}
+/* Next / Prev Buttons */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 55%;
+    background-color: #222;
+    opacity: 0.7;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3.2rem;
+    transform: translate(0, -50%);
+    text-align: center;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+}
+.carousel-prev {
+    left: 0;
+    padding-right: 3px;
+}
+.carousel-prev::before {
+    content: '\f053';
+    font-family: "FontAwesome";
+}
+.carousel-next {
+    right: 0;
+    padding-left: 3px;
+}
+.carousel-next::before {
+    content: '\f054';
+    font-family: "FontAwesome";
+}
+.carousel-prev:hover,
+.carousel-next:hover {
+    opacity: 1;
+    background: #e74c3c;
+}
+/* Pagination */
+.carousel-pagination {
+    list-style: none;
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    right: 0;
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+}
+.carousel-bullet {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition-property: transform, opacity, background-color;
+    transition-duration: 0.3s;
+}
+.carousel-bullet:hover {
+    transform: scale(1.3);
+}
+.carousel-bullet.active-bullet,
+.carousel-bullet.active-bullet:hover {
+    opacity: 1;
+    transform: scale(1.3);
+    background-color: #fff;
+}
+.carousel-bullet:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
 
+
 /*수리사례*/
-.after_repair {
-  background: rgba(44, 62, 80, 0.8);
+.section:nth-child(2) {
+  background: rgba(44, 62, 80, 0.85);
 }
 .after_repair_list {
   width: 70%;
   margin: 0 auto;
-  padding: 1rem 0 0 0;
+  padding: 2rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -364,6 +448,7 @@ export default {
 .after_repair_list li {
   margin-bottom: 2%;
   overflow: hidden;
+  box-shadow: 0px 8px 6px -6px #000;
 }
 .after_repair_list li:nth-child(1),
 .after_repair_list li:nth-child(4) {
@@ -434,7 +519,7 @@ export default {
 
 /*차량관리 팁*/
 .management_tip_list {
-  padding: 1rem 0 0 0;
+  padding: 2rem 0 4rem 0;
   width: 70%;
   margin: 0 auto;
   display: flex;
@@ -448,6 +533,12 @@ export default {
 .management_tip_list li:nth-child(2),
 .management_tip_list li:nth-child(3) {
   margin-bottom: 2.5%;
+}
+.management_tip_list li:nth-child(1),
+.management_tip_list li:nth-child(2),
+.management_tip_list li:nth-child(4),
+.management_tip_list li:nth-child(5) {
+  margin-right: 1%;
 }
 .management_tip_list li a {
   position: relative;
@@ -498,14 +589,14 @@ export default {
 }
 
 /* contact us */
-.section:last-child {
-  background: rgba(44, 62, 80, 0.9);
+.section:nth-child(4) {
+  background: rgba(44, 62, 80, 0.85);
 }
 .contact {
   width: 70%;
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 50px;
+  padding: 0;
 }
 .contact span {
   color: #ECF0F1;

@@ -4,7 +4,7 @@
 		<div class="wrapper">
 			<h1 class="logo">
 				<a href="">
-					<img src="../../assets/images/kardoc.png" alt="">
+					<img src="../../assets/images/kardoc.png" alt="로고">
 				</a>
 			</h1>
 			<a href="#open-area">지역 선택</a>
@@ -135,8 +135,8 @@
     			<h2>사진을 올려주세요</h2>
     			<input type="file" @change="onFileChange">
   			</div>
-  			<div v-else>
-    			<img class="photo-zone" :src="image">
+  			<div class="photo-zone" v-else>
+    			<img :src="image">
     			<button @click="removeImage">Remove image</button>
   			</div>
 			</div>
@@ -181,7 +181,7 @@
 		},
 		methods: {
 			onFileChange(e) {
-				let files = e.target.files || e.dataTransfer.files;
+				var files = e.target.files || e.dataTransfer.files;
 				if(!files.length)  
 					return;
 					this.createImage(files[0]);
@@ -350,13 +350,15 @@ h1,p{
 }
 .photo {
 	margin-top: 30px;
+	position: relative;
 }
-.photo-zone {
-	max-width: 30%;
-	max-height: 30%;
-  margin: auto;
+.photo-zone img {
+	max-width: 640px;
+	max-height: 640px;
+  margin: 0 auto;
   display: block;
   margin-bottom: 10px;
+	text-align: center;
 }
 /* 폼 */
 .wrapper form {

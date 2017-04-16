@@ -86,7 +86,7 @@ ul {
   width: 100%;
   height: auto;
   text-decoration: none;
-  color: #ECF0F1;;
+  color: #ECF0F1;
 }
 
 .company_img {
@@ -261,7 +261,7 @@ ul {
 /*컨택트*/
 
 .section:nth-child(4) {
-  background: rgba(44, 62, 80, 0.7);
+  background: rgba(44, 62, 80, 0.8.5);
 }
 
 .contact_wrapper {
