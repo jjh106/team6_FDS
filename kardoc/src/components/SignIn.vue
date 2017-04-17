@@ -3,7 +3,11 @@
 		<div class="dim"></div>
     <div class="login_page_wrapper">
       <div class="login_container">
-       <h1>로고</h1>
+       <h1 class="logo">
+        <a href="#">
+          <img src="../assets/images/kardoc.png" alt="로고">
+        </a>
+      </h1>
         <form class="login_form" action="">
           <label for="login_id"></label>
           <input id="login_id" type="email" name="email" placeholder="이메일 주소" maxlength="20">
@@ -87,13 +91,18 @@ h1, p{
 }
 /* 로고 */
 .logo {
-  margin-left: 15%;
-  width: 6rem;
-  padding: .8rem;
-  border: 1px solid #ECF0F1;
+	background: #fff;
+	margin: 0 auto 2rem;
+	display: block;
+  width: 8rem;
+  border-radius: 5px;
   color: #ECF0F1;
   text-align: center;
   font-size: 1rem;
+}
+.logo img {
+	width: 100%;
+  padding: 0 .8rem;
 }
 /*로그인 전체 컨테이너 */
 .dim {
@@ -109,7 +118,7 @@ h1, p{
 .login_container {
   background-color: rgba(236, 240, 241, 0.8);
   width: 70%;
-  margin: 7rem auto 0;
+  margin: 5rem auto 0;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 }
@@ -140,10 +149,17 @@ h1, p{
 .login_form input {
   margin: 0 auto;
   display: block;
-  width: 60%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  outline: none;
+  transition: all .5s ease-in-out;
+  width: 50%;
   padding: 1rem 0 1rem .5rem;
   font-size: .8rem;
-  border: none;
+}
+.login_form input:focus {
+  border-bottom: 2px solid #34a77b;
 }
 #login_pwd {
   margin-top: 1rem;

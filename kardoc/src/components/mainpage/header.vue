@@ -7,7 +7,7 @@
         </a>
       </h1>
       <a class="my_page_btn" href="#" role="button">마이페이지</a>
-      <router-link class="register_company_btn" tag="a" to="/estimate">입점신청</router-link>
+      <router-link class="register_company_btn" tag="a" to="/RegisterCompany">입점신청</router-link>
       <!-- max-width:640px -->
       <a class="burger_bar" href="#">
         <i class="fa fa-align-justify" aria-hidden="true"></i>

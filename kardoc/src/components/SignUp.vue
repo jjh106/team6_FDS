@@ -6,7 +6,11 @@
         <p>페이스북 계정을 가지고 있나요?</p>
         <button class="signup_btn_fb" type="button">페이스북으로 회원가입</button>
         <hr>
-        <h1>로고</h1>
+        <h1 class="logo">
+        <a href="#">
+          <img src="../assets/images/kardoc.png" alt="로고">
+        </a>
+      </h1>
         <form class="signup_form" action="">
           <label for="mem_name"></label>
             <input id="mem_name" type="text" placeholder="이름" value="" maxlength="10">
@@ -106,7 +110,7 @@ h1,p,fieldset{
 .separate_line::before {
   content:"";
   display: block;
-  width: 60%;
+  width: 100%;
   height: 1px;
   margin: 1rem auto 1rem;
   background: #b4b4b4;
@@ -125,26 +129,26 @@ h1,p,fieldset{
 
 /* 로고 */
 .logo {
-  display: inline-block;
-  margin-left: 10%;
-  width: 4rem;
-  border: 1px solid #ECF0F1;
-}
-.logo a {
-  display: block;
-  width: 100%;
-  padding: .4rem;
-  text-decoration: none;
-  text-align: center;
-  font-size: .8rem;
+	background: #fff;
+	margin: 1rem auto 2rem;
+	display: block;
+  width: 7rem;
+  padding: .8rem;
+  border-radius: 5px;
   color: #ECF0F1;
+  text-align: center;
+  font-size: 1rem;
+}
+.logo img {
+	width: 100%;
+  padding: 0 .8rem;
 }
 
 /*회원가입 전체 컨테이너 */
 .signup_container {
   background-color: rgba(236, 240, 241, 0.90);
   width: 70%;
-  margin: 2.5rem auto 0;
+  margin: 1.5rem auto;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 }
@@ -164,17 +168,24 @@ h1,p,fieldset{
 }
 
 /*회원가입 작성 폼 */
+.signup_form {
+  margin-top: -2rem;
+}
 .signup_form > input {
   margin: .5rem auto;
   display: block;
-  width: 60%;
+  width: 50%;
   min-width: 18rem;
   padding: .8rem 0 .8rem 1rem;
   font-size: .8rem;
+  background: transparent;
   border: none;
+  border-bottom: 2px solid #aaa;
   outline: none;
-  border-bottom: 2px solid #ccc;
-  border-right: 2px solid #ccc;
+  transition: all .5s ease-in-out;
+}
+.signup_form input:focus {
+  border-bottom: 2px solid #34a77b;
 }
 .signup_form fieldset {
   text-align: center;
@@ -184,14 +195,17 @@ h1,p,fieldset{
 .signup_form legend {
   display: none;
 }
-#male, #female, #agreement {
+#male, #female {
   display: inline-block;
   width: 1rem;
+  margin-top: 1rem;
 }
-
+#agreement {
+  margin-top: -1rem;
+ }
 /*버튼 */
 .signup_btn, .signup_btn_fb {
-  width: 12rem;
+  width: 15rem;
   margin: 0 auto;
   padding: 1rem 0;
   display: block;
@@ -210,7 +224,7 @@ h1,p,fieldset{
 
 /*페이스북 가입 버튼*/
 .signup_btn_fb {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background: #203571;
   color: #ECF0F1;
 }
