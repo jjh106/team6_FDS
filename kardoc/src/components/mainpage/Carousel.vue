@@ -66,7 +66,7 @@
 	.carousel__next {
     position: absolute;
     top: 55%;
-    background-color: #222;
+    background-color: #2c3e50;
     opacity: 0.7;
     border-radius: 50%;
     color: #fff;
@@ -80,9 +80,10 @@
     z-index: 100;
     transition: opacity 0.3s ease;
 		outline: none;
+		border: none;
 }
 .carousel__prev {
-    left: -70px;
+    left: -80px;
     padding-right: 10px;
 }
 .carousel__prev::before {
@@ -91,7 +92,7 @@
     font-family: "FontAwesome";
 }
 .carousel__next {
-    right: -70px;
+    right: -80px;
 		left: auto;
     padding-left: 10px;
 }

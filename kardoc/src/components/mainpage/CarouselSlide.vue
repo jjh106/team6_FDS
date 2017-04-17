@@ -57,8 +57,7 @@
 			opacity: 0;
 		}
 	}
-
-
+	
 	.slide-left-enter-active {
 		animation: slideLeftIn 1s;
 	}

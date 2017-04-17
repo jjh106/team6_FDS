@@ -287,7 +287,7 @@ export default {
   font-size: 1.9rem;
   font-weight: 900;
   color: #ECF0F1;
-  padding: 1.5rem 0 0 0;
+  padding: 0 0 .5rem 0;
   border-bottom: 3px solid #ECF0F1;
 }
 
@@ -344,16 +344,17 @@ export default {
 
 /*수리사례*/
 
-/*
 .section:nth-child(2) {
   background: rgba(44, 62, 80, 0.85);
 }
-*/
-
+.section:nth-child(2) h2 {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
 .after_repair_list {
   width: 80%;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -431,8 +432,11 @@ export default {
 }
 
 /*차량관리 팁*/
+.section:nth-child(3) h2 {
+  margin-top: 2rem;
+}
 .management_tip_list {
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 3rem 0;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -503,11 +507,14 @@ export default {
 
 /* contact us */
 
-/*
+
 .section:nth-child(4) {
   background: rgba(44, 62, 80, 0.85);
 }
-*/
+
+.section:nth-child(4) h2 {
+  margin-top: 1rem;
+}
 .contact {
   width: 80%;
   margin: 0 auto;

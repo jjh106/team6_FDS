@@ -13,15 +13,15 @@
       </h1>
         <form class="signup_form" action="">
           <label for="mem_name"></label>
-            <input id="mem_name" type="text" placeholder="이름" value="" maxlength="10">
+            <input id="mem_name" type="text" placeholder="이름" value="" maxlength="10" v-model="signName">
           <label for="mem_email"></label>
-            <input id="mem_email" type="email" placeholder="이메일" value="" maxlength="20">
+            <input id="mem_email" type="email" placeholder="이메일" value="" maxlength="20" v-model="signEmail">
           <label for="mem_pwd"></label>
-            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" value="" minlength="6" maxlength="15">
+            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" value="" minlength="6" maxlength="15" v-model="signPwd">
           <label for="mem_birth"></label>
-            <input id="mem_birth" type="text" placeholder="생년월일 EX) YYYY-MM-DD" value="" maxlength="10">
+            <input id="mem_birth" type="text" placeholder="생년월일 EX) YYYY-MM-DD" value="" maxlength="10" v-model="signBirth">
           <label for="mem_tel"></label>
-            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" value="">
+            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" value="" v-model="signNumber">
           <fieldset>
             <legend>성별</legend>
             <span>성별:</span>
@@ -43,12 +43,52 @@
 </template>
 
 <script>
-
+// import axios from 'axios'
 export default {
   name: 'SignUp_wrapper',
   data() {
     return {
-
+      signName: '',
+      signEmail: '',
+      signPwd: '',
+      signBirth: '',
+      signNumber: ''
+    }
+  },
+  methods: {
+    signUp(e) {
+      if(!this.signEmail || !this.signName || !this.signPwd || !this.signBirth || !this.signNumber) {
+        console.error('양식을 모두 채워주세요');
+      }
+      if(e) {e.preventDefault();
+      }
+      axios.post('http://api.kardoc.kr/user/', {
+        email: this.signEmail,
+        name: this.signName,
+        password: this.signPwd,
+        birth: this.signBirth,
+        phone: this.signNumber
+      })
+      .then(response => {
+        console.log(response);
+        if(response.status === 201 && response.statusText === 'Created') {
+          console.log('then 실행');
+          this.signEmail = '';
+          this.signPwd = '';
+          this.signName = '';
+          this.signNumber = '';
+          this.signBirth = '';
+          window.alert(response.data.name + '님, 환영합니다!');
+        }
+      })
+      .catch(error => {
+        this.signEmail = '';
+        this.signPwd = '';
+        this.signName = '';
+        this.signNumber = '';
+        this.signBirth = '';
+        window.alert('회원 가입에 실패했습니다.');
+      });
     }
   }
 }
