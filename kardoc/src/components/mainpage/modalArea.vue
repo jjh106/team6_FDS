@@ -132,6 +132,7 @@ export default {
   background: rgba(44, 62, 80, 0.1);
   display: block;
   transition: all .5s ease-in-out;
+  outline: none;
 	border: none;
   cursor: pointer;
 }

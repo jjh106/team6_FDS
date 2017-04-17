@@ -117,6 +117,43 @@
                   </li>
                 </ul>
               </carousel-slide>
+              <carousel-slide>
+                <ul class="shop_list carousel-item">
+                  <li>
+                    <a href="#">
+                      <div class="company_img">
+                        <img src="../../assets/images/after_repair_1.jpg" alt="공업사">
+                      </div>
+                      <div class="company_desc">
+                        <h3>company name</h3>
+                        <p>address</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="company_img">
+                        <img src="../../assets/images/after_repair_1.jpg" alt="공업사">
+                      </div>
+                      <div class="company_desc">
+                        <h3>company name</h3>
+                        <p>address</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="company_img">
+                        <img src="../../assets/images/after_repair_1.jpg" alt="공업사">
+                      </div>
+                      <div class="company_desc">
+                        <h3>company name</h3>
+                        <p>address</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </carousel-slide>
             </carousel>
           </div>
         </div>
@@ -230,7 +267,7 @@ export default {
 <style scoped>
 /*컨테이너*/
 .main_container {
-  background-image: url(../../assets/images/k-033.jpg);
+  background-image: url(../../assets/images/tokyo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -240,7 +277,7 @@ export default {
 /*전체 섹션 공통*/
 .section {
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   text-align: center;
   padding: 3rem 0;
 }

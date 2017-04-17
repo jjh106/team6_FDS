@@ -17,9 +17,9 @@
           <label for="mem_email"></label>
             <input id="mem_email" type="email" placeholder="이메일" value="" maxlength="20">
           <label for="mem_pwd"></label>
-            <input id="mem_pwd" type="password" placeholder="비밀번호(6~10자)" value="" minlength="6" maxlength="10">
+            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" value="" minlength="6" maxlength="15">
           <label for="mem_birth"></label>
-            <input id="mem_birth" type="text" placeholder="생년월일 EX)19880225" value="" maxlength="8">
+            <input id="mem_birth" type="text" placeholder="생년월일 EX) YYYY-MM-DD" value="" maxlength="10">
           <label for="mem_tel"></label>
             <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" value="">
           <fieldset>

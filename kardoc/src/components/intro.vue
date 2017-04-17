@@ -4,8 +4,8 @@
 		<div class="container">
 			<img src="../assets/images/kardoc.png" alt="로고">
 			<h1>언제 어디서든 믿고 수리하세요!</h1>
-			<router-link tag="button" to="/SignIn">SignIn</router-link>
-			<router-link tag="button" to="/SignUp">SignUp</router-link>
+			<router-link tag="button" to="/SignIn">SIGN IN</router-link>
+			<router-link tag="button" to="/SignUp">SIGN UP</router-link>
 		</div>
 	</div>
 </template>
@@ -81,29 +81,28 @@ a:hover, a:focus {
 	color: #ECF0f1;
 }
 .container img {
-	width: 9rem;
+	width: 8rem;
 	background-color: #fff;
 	padding: .8rem;
 	border-radius: 5px;
 }
 .container button {
 	background: none;
-	margin: 10px 5px;
+	margin: 15px 5px;
 	border: 3px solid #ECF0f1;
 	display: inline-block;
-	width: 150px;
+	width: 130px;
 	height: 50px;
 	line-height: 0.7;
 	border-radius: 10px;
 	color: #ECF0f1;
 	font-size: 1.5rem;
-	font-weight: 500;
+	font-weight: 700;
 	cursor: pointer;
+	transition: 0.5s all;
 }
 .container button:hover {
 	background-color: #ECF0f1;
 	color: #2c3e50;
-	transition: 0.5s all;
-	font-weight: 500;
 }
 </style>

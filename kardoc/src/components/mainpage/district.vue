@@ -60,6 +60,7 @@ export default {
 		padding: .5rem;
 		background: #fff;
 		cursor: pointer;
+		outline: none;
 	}
 	button:focus {
 		background-color: #2c3e50;

@@ -41,7 +41,6 @@
 </template>
 
 <script>
-
 import modalArea from './modalArea.vue'
 
 export default {
@@ -112,7 +111,7 @@ export default {
 
 /*헤더 영역*/
 .main_header{
-  background-image: url(../../assets/images/k-033.jpg);
+  background-image: url(../../assets/images/k-021.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -122,27 +121,28 @@ export default {
   85% {transform: rotate(10deg);}
   90% {transform: rotate(15deg);}
   95% {transform: rotate(20deg);}
-  100% {left: 20%;}
+  100% {left: 15%;}
 }
 
 .logo {
+  background-color: #fff;
   display: inline-block;
-  margin-left: -5%;
   width: 8rem;
+  height: 7.5rem;
   border-radius: 0 0 5px 5px;
   border: none;
   position: absolute;
-  top: -15px;
+  top: -35px;
   transition: all .5s;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
   animation-name: runingCar;
   animation-iteration-count: 1;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
 .logo:hover {
-  top: 0;
-  background: #ecf0f1;
+  top: -20px;
+  background-color: #fff;
 }
 .logo a {
   width: 100%;
@@ -152,7 +152,7 @@ export default {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 /* 탑 네비게이션 */
 .nav_top {

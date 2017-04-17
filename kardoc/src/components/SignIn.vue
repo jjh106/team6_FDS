@@ -155,7 +155,7 @@ h1, p{
   outline: none;
   transition: all .5s ease-in-out;
   width: 50%;
-  padding: 1rem 0 1rem .5rem;
+  padding: .5rem 0 1rem .5rem;
   font-size: .8rem;
 }
 .login_form input:focus {
@@ -177,7 +177,7 @@ h1, p{
 }
 /*일반 로그인 버튼*/
 .login_btn {
-  margin-top: 1rem;
+  margin-top: 2rem;
   background: #2C3E50;
   color: #ECF0F1;
   font-weight: bold;
@@ -191,7 +191,7 @@ h1, p{
 /*아이디 패스워드 찾기*/
 .find_id_pwd {
   width: 60%;
-  padding: 1.5rem;
+  padding: 1.5rem 0 0 0;
   margin: 0 auto;
 }
 .find_id_pwd a {
