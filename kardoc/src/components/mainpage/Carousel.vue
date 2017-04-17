@@ -3,6 +3,9 @@
 		<slot></slot>
 		<button class="carousel__nav carousel__prev" @click.prevent="prev"></button>
 		<button class="carousel__nav carousel__next" @click.prevent="next"></button>
+		<div class="carousel__pagination">
+			<button v-for="n in slidesCount" @click="goto(n-1)" :class="{active: n - 1 == index}"></button>
+		</div>
 	</div>
 </template>
 
@@ -12,7 +15,7 @@
 			return {
 				index: 0,
 				slides: [],
-				direction: ''
+				direction: 'null'
 			}
 		},
 		mounted() {
@@ -38,6 +41,10 @@
 				if(this.index < 0) {
 					this.index = this.slidesCount - 1
 				}
+			},
+			goto(index) {
+				this.direction = index > this.index ? 'right' : 'left'
+				this.index = index
 			}
 		}
 	}
@@ -72,6 +79,7 @@
     text-align: center;
     z-index: 100;
     transition: opacity 0.3s ease;
+		outline: none;
 }
 .carousel__prev {
     left: -70px;
@@ -96,5 +104,28 @@
 .carousel__next:hover {
     opacity: 1;
     background: #e74c3c;
+}
+
+.carousel__pagination {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.carousel__pagination button {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	opacity: 0.8;
+	border: none;
+	border-radius: 50%;
+	margin: 10px 2px 0 2px;
+	outline: none;
+}
+.carousel__pagination button.active {
+	background-color: #e74c3c;
+	
 }
 </style>

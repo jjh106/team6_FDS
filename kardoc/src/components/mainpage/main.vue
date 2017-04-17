@@ -195,13 +195,13 @@
       <section class="section">
         <h2>CONTACT US</h2>
         <div class="contact">
-          <span><i class="fa fa-map-marker" aria-hidden="true"></i> 4F, Geumwon building, Jamwon-dong 8-12, Seocho-gu, Seoul, South Korea</span>
-          <br>
-          <span><i class="fa fa-phone" aria-hidden="true"></i> 010-9263-6925</span>
-          <br>
-          <span><i class="fa fa-envelope" aria-hidden="true"></i> master@KarDoc.co.kr</span>
           <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1283.3851636901431!2d127.01801334134032!3d37.51660973080532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2b9887fd23eea45!2sGeum-won+building!5e0!3m2!1sko!2skr!4v1491481881624" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+          </div>
+          <div class="contact_info">
+            <span><i class="fa fa-map-marker" aria-hidden="true"></i> 4F, Geumwon building, Jamwon-dong 8-12, <br>Seocho-gu, Seoul, South Korea</span>
+            <span><i class="fa fa-phone" aria-hidden="true"></i> 010-9263-6925</span>
+            <span><i class="fa fa-envelope" aria-hidden="true"></i>master@KarDoc.co.kr</span>
           </div>
         </div>
       </section>
@@ -306,9 +306,13 @@ export default {
 }
 
 /*수리사례*/
+
+/*
 .section:nth-child(2) {
   background: rgba(44, 62, 80, 0.85);
 }
+*/
+
 .after_repair_list {
   width: 80%;
   margin: 0 auto;
@@ -461,36 +465,49 @@ export default {
 }
 
 /* contact us */
+
+/*
 .section:nth-child(4) {
   background: rgba(44, 62, 80, 0.85);
 }
+*/
 .contact {
   width: 80%;
   margin: 0 auto;
-  text-align: center;
-  padding: 0;
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
-.contact span {
-  color: #ECF0F1;
+.map,
+.contact_info {
+  width: 49%;
+  border-radius: 2px;
+}
+.contact_info {
+  background: rgba(46, 46, 46, 0.9);
+  padding-top: 3rem;
+}
+.contact_info span {
+  display: block;
   font-size: 1.2rem;
-  line-height: 1.5;
+  padding: 1rem 1rem;
+  color: #ECF0F1;
 }
-.fa-map-marker, .fa-phone, .fa-envelope {
-  color: #e74c3c;
-}
-.map {
-  position: relative;
-  padding-bottom: 33.3333%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  margin-top: 20px;
+.contact_info span::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: 1rem;
 }
 .map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+}
+.contact_info span i,
+.contact_info span i,
+.contact_info span i {
+  margin-right: .5rem;
+  color: #e74c3c;
 }
 </style>

@@ -15,7 +15,9 @@
 		},
 		computed: {
 			transition() {
-				return 'slide-' + this.$parent.direction
+				if(this.$parent.direction) {
+					return 'slide-' + this.$parent.direction
+				}
 			},
 			visible() {
 				return this.index === this.$parent.index

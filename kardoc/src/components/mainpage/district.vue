@@ -1,6 +1,6 @@
 <template>
 	<div class="gu_wrapper">
-		<button v-for="gu in seoul" @click="$emit('selectOk')">{{gu.value}}</button>
+		<button v-for="gu in seoul" @click.prevent="$emit('selectOk')">{{gu.value}}</button>
 	</div>
 </template>
 
