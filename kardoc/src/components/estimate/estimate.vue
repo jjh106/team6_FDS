@@ -25,14 +25,10 @@
 					<input type="text" id="car-number" placeholder="차량 번호" required>
 				</fieldset>
 			</form>
-			<div class="photo">
-				<div v-if="!image">
-    			<input type="file" @change="onFileChange">
-  			</div>
-  			<div class="photo-zone" v-else>
-    			<img :src="image">
-    			<button @click="removeImage">Remove image</button>
-  			</div>
+			<div class="photo_zone">
+    		<input type="file" @change="onFileChange">
+    		<input type="file" @change="onFileChange">
+    		<input type="file" @change="onFileChange">
 			</div>
 			<form>
 				<fieldset> 
@@ -76,7 +72,6 @@ import modalParts from './modalParts.vue'
   	},
 		data() {
 			return {
-				image: '',
 				is_show_modal_area: false,
 				is_show_modal_parts: false,
 				options: [
@@ -140,25 +135,6 @@ import modalParts from './modalParts.vue'
 			}
 		},
 		methods: {
-			onFileChange(e) {
-				var files = e.target.files || e.dataTransfer.files;
-				if(!files.length)  
-					return;
-					this.createImage(files[0]);
-			},
-			createImage(file) {
-      	let image = new Image();
-      	let reader = new FileReader();
-      	let vm = this;
-
-      	reader.onload = (e) => {
-        	vm.image = e.target.result;
-      	};
-      	reader.readAsDataURL(file);
-    	},
-			removeImage: function (e) {
-      	this.image = '';
-    	},
 			showModalArea() {
       	this.is_show_modal_area = true;
     	},
@@ -216,7 +192,6 @@ h1,p{
   background: rgba(44, 62, 80, 0.90);
   padding: 1.5rem 0;
 }
-
 /* 로고 */
 .logo {
 	background: #fff;
@@ -236,7 +211,7 @@ h1,p{
   background-color: rgba(236, 240, 241, 0.8);
   width: 70%;
   min-width: 24rem;
-  margin:2rem auto 0;
+  margin: 5rem auto;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 	text-align: center;
@@ -251,17 +226,14 @@ h1,p{
 	text-align: center;
 	cursor: pointer;
 }
-.photo {
-	margin-top: 30px;
-	position: relative;
+.photo_zone {
+	margin: 1rem auto 0;
+	background: #fff;
+	width: 425px;
 }
-.photo-zone img {
-	max-width: 240px;
-	max-height: 240px;
-  margin: 0 auto;
-  display: block;
-  margin-bottom: 10px;
-	text-align: center;
+.photo_zone input {
+	width: 130px;
+	margin: .2rem 0;
 }
 /* 폼 */
 .wrapper form {

@@ -87,4 +87,21 @@
 .footer_sns_list .fa-instagram {
   font-size: 2rem;
 }
+
+@media screen and (max-width: 640px) {
+  .footer_link {
+    width: 70%;
+  }
+  .footer_link li {
+    width: 20%;
+    text-align: center;
+    margin: 0;
+}
+  .footer_link li a {
+    font-size: .7rem;
+  }
+  .footer_sns_list {
+    width: 25%;
+  }
+}
 </style>

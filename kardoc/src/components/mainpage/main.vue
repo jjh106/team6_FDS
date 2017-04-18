@@ -17,6 +17,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                   <li>
@@ -28,6 +29,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>                      
                     </a>
                   </li>
                   <li>
@@ -39,6 +41,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                 </ul>
@@ -54,6 +57,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                   <li>
@@ -65,6 +69,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                   <li>
@@ -76,6 +81,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                 </ul>
@@ -91,6 +97,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                   <li>
@@ -102,6 +109,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                   <li>
@@ -113,6 +121,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                 </ul>
@@ -128,6 +137,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                   <li>
@@ -139,6 +149,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                   <li>
@@ -150,6 +161,7 @@
                         <h3>company name</h3>
                         <p>address</p>
                       </div>
+                      <router-link class="estimate_btn" tag="button" to="/Estimate">견적요청하기</router-link>
                     </a>
                   </li>
                 </ul>
@@ -298,7 +310,7 @@ export default {
 }
 .shop_list {
   margin: 0 auto;
-  padding: 2rem 0 3rem 0;
+  padding: 2rem 0 4rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -341,11 +353,33 @@ export default {
 .company_desc p {
   padding: .5rem 0;
 }
-
+.estimate_btn {
+  width: 13rem;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #fff;
+  color: #2c3e50;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .3s;
+}
+.estimate_btn:hover {
+  background-color: #2c3e50;
+  color: #fff;
+}
 /*수리사례*/
 
 .section:nth-child(2) {
-  background: rgba(44, 62, 80, 0.85);
+  padding-top: 0;
+}
+.section:nth-child(2)::before {
+  margin: 0 auto 3rem;
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #a2a2a2;
+  width: 80%;
 }
 .section:nth-child(2) h2 {
   margin-top: 1rem;
@@ -432,11 +466,22 @@ export default {
 }
 
 /*차량관리 팁*/
+.section:nth-child(3) {
+  padding-top: 0;
+}
+.section:nth-child(3)::before {
+  margin: 0 auto 2rem;
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #a2a2a2;
+  width: 80%;
+}
 .section:nth-child(3) h2 {
   margin-top: 2rem;
 }
 .management_tip_list {
-  padding: 2rem 0 3rem 0;
+  padding: 2rem 0 2rem 0;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -507,11 +552,17 @@ export default {
 
 /* contact us */
 
-
 .section:nth-child(4) {
-  background: rgba(44, 62, 80, 0.85);
+  padding-top: 0;
 }
-
+.section:nth-child(4)::before {
+  margin: 0 auto 3rem;
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #a2a2a2;
+  width: 80%;
+}
 .section:nth-child(4) h2 {
   margin-top: 1rem;
 }
@@ -559,6 +610,11 @@ export default {
   .section {
     padding: 1rem 0;
   }
+  .section:nth-child(2)::before,
+  .section:nth-child(3)::before,
+  .section:nth-child(4)::before {
+    width: 90%;
+  }
   .after_repair_list,
   .management_tip_list,
   .contact_wrapper {
@@ -566,6 +622,9 @@ export default {
     margin: 0 auto;
   }
   /*주요공업사 리스트*/
+  .section:nth-child(1) h2 {
+    margin-top: -1rem;
+  }
   .featured_shop {
     width: 100%;
     top: 44px;
@@ -588,6 +647,9 @@ export default {
   .dim_bg {
     display: none;
   }
+  .section:nth-child(2) h2 {
+    margin-top: -1rem;
+  }
   .after_repair_list li:nth-child(1),
   .after_repair_list li:nth-child(2),
   .after_repair_list li:nth-child(3),
@@ -607,7 +669,10 @@ export default {
   /*차량 관리팁*/
   .section:nth-child(3) {
     padding-bottom: 0;
-}
+  }
+  .section:nth-child(3) h2 {
+    margin-top: 0;
+  }
   .management_tip_list li {
     width: 100%;
   }
@@ -629,6 +694,10 @@ export default {
 
   .map iframe {
     height: auto;
+  }
+
+  .contact_info {
+    padding: 1rem;
   }
 
   .contact_info span {
