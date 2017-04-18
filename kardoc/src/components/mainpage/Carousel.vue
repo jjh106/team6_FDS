@@ -127,6 +127,14 @@
 }
 .carousel__pagination button.active {
 	background-color: #e74c3c;
-	
+}
+
+@media screen and (max-width: 640px) {
+	.carousel__prev {
+		left: 2%;
+	}
+	.carousel__next {
+		right: 2%;
+	}
 }
 </style>

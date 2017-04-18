@@ -8,7 +8,6 @@
   .main_header{
     background-image: none;
   }
-
   .nav_top {
     background: rgba(0, 0, 0, 0.9);
     position: fixed;
@@ -16,24 +15,20 @@
     left: 0;
     right: 0;
   }
-
   .logo {
     margin-left: -15%;
     width: 3.5rem;
     height: 3.5rem;
     top: -5px;
   }
-
   .logo a {
     padding: .5rem;
     background: #cbcbcb;
   }
-
   /*모바일 메뉴*/
   .burger_bar {
     display: block;
   }
-
   .burger_bar .fa-align-justify{
     display: block;
     float: right;
@@ -44,8 +39,6 @@
     text-align: right;
     position: relative;
   }
-
-
   .search_region_form,
   .gnb,
   .my_page_btn,
@@ -70,14 +63,11 @@
     width: 90%;
     margin: 0 auto;
   }
-
   /*주요공업사 리스트*/
-
   .featured_shop {
     width: 100%;
     top: 44px;
     padding-bottom: 2rem;
-
   }
   .shop_list {
     width: 25%;
@@ -86,22 +76,18 @@
     width: 90%;
     margin: 0 auto;
   }
-
   .shop_list li:nth-child(2),
   .shop_list li:nth-child(3),
   .shop_list li:nth-child(4) {
     display: none;
   }
-
   .carousel-pagination {
     bottom: 50px;
   }
-
   /*수리사례*/
   .dim_bg {
     display: none;
   }
-
   .after_repair_list li:nth-child(1),
   .after_repair_list li:nth-child(2),
   .after_repair_list li:nth-child(3),
@@ -118,18 +104,12 @@
     padding-bottom: 30%;
   }
 
-
   /*차량 관리팁*/
   .management_tip_list li a {
     border: none;
-    border-radius: 50%;
-    background: #e0685c;
   }
 
-
-
   /*컨택트*/
-
   .map,
   .contact_info {
     width: 100%;

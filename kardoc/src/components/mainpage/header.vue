@@ -9,18 +9,18 @@
       <a class="my_page_btn" href="#" role="button">마이페이지</a>
       <router-link class="register_company_btn" tag="a" to="/RegisterCompany">입점신청</router-link>
       <!-- max-width:640px -->
-      <a class="burger_bar" href="#">
+      <a class="burger_bar" onclick="$('.mb_main_menu').stop().toggle(300)">
         <i class="fa fa-align-justify" aria-hidden="true"></i>
-        <ul class="mb_main_menu">
-          <li><a href="">마이페이지</a></li>
-          <li><a href="">입점신청</a></li>
-          <li><a href="">HOME</a></li>
-          <li><a href="">추천업체</a></li>
-          <li><a href="">우수사례</a></li>
-          <li><a href="">차량관리 팁</a></li>
-          <li><a href="">CONTACT US</a></li>
-        </ul>
       </a>
+      <ul class="mb_main_menu">
+        <li><a href="">마이페이지</a></li>
+        <li><a href="">입점신청</a></li>
+        <li><a href="">HOME</a></li>
+        <li><a href="">추천업체</a></li>
+        <li><a href="">우수사례</a></li>
+        <li><a href="">차량관리 팁</a></li>
+        <li><a href="">CONTACT US</a></li>
+      </ul>
     </nav>
     <form class="search_region_form">
       <p>언제 어디서든 믿고 수리하세요!</p>
@@ -50,7 +50,8 @@ export default {
   },
   data() {
     return {
-      is_show_modal: false
+      is_show_modal: false,
+      show_menu: !true
     }
   },
   methods: {
@@ -62,18 +63,6 @@ export default {
     }
   },
   mounted() {
-    $( document ).ready( function() {
-        var fixedGnb = $( '.gnb' ).offset();
-        $( window ).scroll( function() {
-          if ( $( document ).scrollTop() > fixedGnb.top ) {
-            $( '.gnb' ).addClass( 'gnb_fixed' );
-          }
-          else {
-            $( '.gnb' ).removeClass( 'gnb_fixed' );
-          }
-        });
-  });
-  
     $('.main_menu li:eq(0)').click(function(evt){
       console.log("go search");
       evt.preventDefault();
@@ -102,7 +91,26 @@ export default {
       evt.preventDefault();
       var $target = $('section:eq(3)');
       $('html,body').animate({scrollTop: $target.offset().top},800,'easeInCubic');
-  });
+  }),
+
+    $(window).resize(function (){
+    var width_size = window.outerWidth;
+    if (width_size >= 640) {
+      $('.mb_main_menu').css('display', 'none');
+    }
+    }),
+    
+    $(document).ready( function() {
+        var fixedGnb = $( '.gnb' ).offset();
+        $(window).scroll( function() {
+          if ( $(document).scrollTop() > fixedGnb.top ) {
+            $('.gnb').addClass('gnb_fixed');
+          }
+          else {
+            $('.gnb').removeClass('gnb_fixed');
+          }
+        })
+      })
   }
 }
 </script>
@@ -202,7 +210,7 @@ export default {
 }
 .mb_main_menu {
   display: none;
-  background: rgba(44, 62, 80, 0.8);
+  background: rgba(51, 51, 51, 0.97);
   width: 100%;
   position: absolute;
   top: 44px;
@@ -323,5 +331,52 @@ export default {
 .register_company_btn:hover::after {
   right: 0;
   left: 0;
+}
+
+@media screen and (max-width: 640px) {
+  /*메인페이지 헤더*/
+  .main_header{
+    display: block;
+  }
+  .nav_top {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .logo {
+    position: absolute;
+    margin-left: -5%;
+    width: 5rem;
+    height: 5rem;
+    top: -16px;
+    padding: 0;
+    z-index: 100;
+  }
+  .logo a img {
+    width: 100%;
+    padding: .5rem;
+    margin: 10px 0 0 0;
+  }
+  /*모바일 메뉴*/
+  .burger_bar {
+    display: block;
+  }
+  .burger_bar .fa-align-justify{
+    display: block;
+    float: right;
+    margin-right: 5%;
+    margin-top: 4px;
+    color: #e0685c;
+    font-size: 2.5rem;
+    text-align: right;
+    position: relative;
+  }
+  .gnb,
+  .my_page_btn,
+  .register_company_btn {
+    display: none;
+  }
 }
 </style>

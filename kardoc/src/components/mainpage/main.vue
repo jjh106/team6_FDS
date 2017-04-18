@@ -554,4 +554,86 @@ export default {
   margin-right: .5rem;
   color: #e74c3c;
 }
+@media screen and (max-width: 640px) {
+  /*메인 컨테이너*/
+  .section {
+    padding: 1rem 0;
+  }
+  .after_repair_list,
+  .management_tip_list,
+  .contact_wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /*주요공업사 리스트*/
+  .featured_shop {
+    width: 100%;
+    top: 44px;
+    padding-bottom: 3rem;
+  }
+  .shop_list {
+    width: 80%;
+  }
+  .shop_list li {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .shop_list li:nth-child(2),
+  .shop_list li:nth-child(3),
+  .shop_list li:nth-child(4) {
+    display: none;
+  }
+
+  /*수리사례*/
+  .dim_bg {
+    display: none;
+  }
+  .after_repair_list li:nth-child(1),
+  .after_repair_list li:nth-child(2),
+  .after_repair_list li:nth-child(3),
+  .after_repair_list li:nth-child(4) {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .after_repair_list li {
+    margin-bottom: 4%;
+  }
+
+  .after_repair_list li a {
+    padding-bottom: 30%;
+  }
+
+  /*차량 관리팁*/
+  .section:nth-child(3) {
+    padding-bottom: 0;
+}
+  .management_tip_list li {
+    width: 100%;
+  }
+  .management_tip_list li:nth-child(4),
+  .management_tip_list li:nth-child(5),
+  .management_tip_list li:nth-child(6) {
+    display: none;
+  }
+
+  /*컨택트*/
+  .map,
+  .contact_info {
+    width: 100%;
+  }
+
+  .map {
+    height: 10rem;
+  }
+
+  .map iframe {
+    height: auto;
+  }
+
+  .contact_info span {
+    padding: .5rem;
+    font-size: 1rem;
+  }
+}
 </style>
