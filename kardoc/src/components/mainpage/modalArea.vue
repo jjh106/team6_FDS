@@ -24,13 +24,12 @@
         <li class="region"><button type="button">전라남도</button></li>
         <li class="region"><button type="button">세종시</button></li>
       </ul>
-			<button type="button" class="ok_btn" @selectOk="transText">{{button_text}}</button>
+			<button type="button" class="ok_btn" @selectOk="transText()">{{button_text}}</button>
     </div>
   </div>
 </template>
 
 <script>
-
 import district from './district.vue'
 
 export default {
