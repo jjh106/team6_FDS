@@ -57,7 +57,7 @@
 					<input type="text" placeholder="휴대전화 번호를 입력해 주세요. (-제외)" id="phone-number">
 				</fieldset>
 			</form>
-			<button type="submit" class="submit-btn">수리 견적 요청</button>
+			<button type="submit" class="submit-btn">수리견적 요청</button>
 		</div>
 	</div>
 </template>

@@ -305,7 +305,7 @@ export default {
 
 /*주요 공업사*/
 .featured_shop {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 .shop_list {
@@ -379,14 +379,14 @@ export default {
   display: block;
   height: 1px;
   background-color: #a2a2a2;
-  width: 80%;
+  width: 75%;
 }
 .section:nth-child(2) h2 {
   margin-top: 1rem;
   margin-bottom: .5rem;
 }
 .after_repair_list {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   padding: 1rem 0;
   display: flex;
@@ -475,14 +475,14 @@ export default {
   display: block;
   height: 1px;
   background-color: #a2a2a2;
-  width: 80%;
+  width: 75%;
 }
 .section:nth-child(3) h2 {
   margin-top: 2rem;
 }
 .management_tip_list {
   padding: 2rem 0 2rem 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
@@ -562,13 +562,13 @@ export default {
   display: block;
   height: 1px;
   background-color: #a2a2a2;
-  width: 80%;
+  width: 75%;
 }
 .section:nth-child(4) h2 {
   margin-top: 1rem;
 }
 .contact {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
