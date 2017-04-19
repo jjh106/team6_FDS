@@ -13,29 +13,23 @@
       </h1>
         <form class="signup_form" action="">
           <label for="mem_name"></label>
-            <input id="mem_name" type="text" placeholder="이름" value="" maxlength="10" v-model="signName">
+            <input id="mem_name" type="text" placeholder="이름" value="" maxlength="10" v-model="username">
           <label for="mem_email"></label>
-            <input id="mem_email" type="email" placeholder="이메일" value="" maxlength="20" v-model="signEmail">
+            <input id="mem_email" type="email" placeholder="이메일" value="" maxlength="20" v-model="email">
           <label for="mem_pwd"></label>
-            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" value="" minlength="6" maxlength="15" v-model="signPwd">
+            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" value="" minlength="6" maxlength="15" v-model="password">
           <label for="mem_birth"></label>
-            <input id="mem_birth" type="text" placeholder="생년월일 EX) YYYY-MM-DD" value="" maxlength="10" v-model="signBirth">
+            <input id="mem_birth" type="text" placeholder="생년월일 EX) YYYY-MM-DD" value="" maxlength="10" v-model="birth">
           <label for="mem_tel"></label>
-            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" value="" v-model="signNumber">
-          <fieldset>
-            <legend>성별</legend>
-            <span>성별:</span>
-            <label for="male">남</label>
-              <input id="male" type="radio" name="sex" value="male">
-            <label for="female">여</label>
-              <input id="female" type="radio" name="sex" value="female">
-          </fieldset>
+            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" value="" v-model="phone">
+          <label for="mem_gender"></label>
+            <input id="mem_gender" type="text" placeholder="성별 : F or M" value="" v-model="gender">
           <p>
             <span class="separate_line">개인정보 이용동의</span>
             <label for="agreement"></label>
             <input id="agreement" type="checkbox" name="약관동의" value="agree" checked="">
           </p>
-          <button class="signup_btn" type="submit">작성 완료</button>
+          <button class="signup_btn" type="submit" @click="signUp">작성 완료</button>
         </form>
       </div>
     </div>
@@ -48,45 +42,46 @@ export default {
   name: 'SignUp_wrapper',
   data() {
     return {
-      signName: '',
-      signEmail: '',
-      signPwd: '',
-      signBirth: '',
-      signNumber: ''
+      email: '',
+      username: '',
+      password: '',
+      birth: '',
+      phone: '',
+      gender: ''
     }
   },
   methods: {
-    signUp(e) {
-      if(!this.signEmail || !this.signName || !this.signPwd || !this.signBirth || !this.signNumber) {
+    signUp() {
+      if(!this.email || !this.username || !this.password || !this.birth || !this.phone || !this.gender) {
         console.error('양식을 모두 채워주세요');
       }
-      if(e) {e.preventDefault();
-      }
-      axios.post('http://api.kardoc.kr/user/', {
-        email: this.signEmail,
-        name: this.signName,
-        password: this.signPwd,
-        birth: this.signBirth,
-        phone: this.signNumber
+      this.$http.post('http://api.kardoc.kr/user/', {
+        email: this.email,
+        username: this.username,
+        password: this.password,
+        birth: this.birth,
+        phone: this.phone,
+        gender: this.gender
       })
       .then(response => {
         console.log(response);
         if(response.status === 201 && response.statusText === 'Created') {
-          console.log('then 실행');
-          this.signEmail = '';
-          this.signPwd = '';
-          this.signName = '';
-          this.signNumber = '';
-          this.signBirth = '';
+          this.email = '';
+          this.username = '';
+          this.password = '';
+          this.birth = '';
+          this.phone = '';
+          this.gender = '';
           window.alert(response.data.name + '님, 환영합니다!');
         }
-      })
+      });
       .catch(error => {
-        this.signEmail = '';
-        this.signPwd = '';
-        this.signName = '';
-        this.signNumber = '';
-        this.signBirth = '';
+        this.email = '';
+        this.username = '';
+        this.password = '';
+        this.birth = '';
+        this.phone = '';
+        this.gender = '';
         window.alert('회원 가입에 실패했습니다.');
       });
     }

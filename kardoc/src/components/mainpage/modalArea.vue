@@ -30,7 +30,6 @@
 </template>
 
 <script>
-
 import district from './district.vue'
 
 export default {

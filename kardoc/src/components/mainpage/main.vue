@@ -178,25 +178,25 @@
           <ul class="after_repair_list">
             <li>
               <a href="#">
-                <p>repaired postscript</p>
+                <p>Mercedes-Benz</p>
                 <div class="dim_bg"></div>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>repaired postscript</p>
+                <p>the others</p>
                 <div class="dim_bg"></div>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>repaired postscript</p>
+                <p>AUDI</p>
                 <div class="dim_bg"></div>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>repaired postscript</p>
+                <p>BMW</p>
                 <div class="dim_bg"></div>
               </a>
             </li>
@@ -210,32 +210,32 @@
           <ul class="management_tip_list">
             <li>
               <a href="">
-                <p>Tip of car management</p>
+                <p>빗길 사고의 주범, 유막!</p>
               </a>
             </li>
             <li>
               <a href="">
-                <p>Tip of car management</p>
+                <p>벤츠 전용 엔진오일 규격 가이드</p>
               </a>
             </li>
             <li>
               <a href="">
-                <p>Tip of car management</p> 
+                <p>자동차 정비업체 분류 기준</p> 
               </a>
             </li>
             <li>
               <a href="">
-                <p>Tip of car management</p> 
+                <p>빠른 수리가 필요한 케이스!</p> 
               </a>
             </li>
             <li>
               <a href="">
-                <p>Tip of car management</p> 
+                <p>교통사고 현장 대처방법</p> 
               </a>
             </li>
             <li>
               <a href="">
-                <p>Tip of car management</p> 
+                <p>자동차 부식의 주범, 도로위 염화칼슘</p> 
               </a>
             </li>
           </ul>
@@ -305,7 +305,7 @@ export default {
 
 /*주요 공업사*/
 .featured_shop {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 .shop_list {
@@ -379,14 +379,14 @@ export default {
   display: block;
   height: 1px;
   background-color: #a2a2a2;
-  width: 80%;
+  width: 75%;
 }
 .section:nth-child(2) h2 {
   margin-top: 1rem;
   margin-bottom: .5rem;
 }
 .after_repair_list {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   padding: 1rem 0;
   display: flex;
@@ -475,14 +475,14 @@ export default {
   display: block;
   height: 1px;
   background-color: #a2a2a2;
-  width: 80%;
+  width: 75%;
 }
 .section:nth-child(3) h2 {
   margin-top: 2rem;
 }
 .management_tip_list {
   padding: 2rem 0 2rem 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
@@ -543,7 +543,8 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
   text-shadow: 2px 2px 0 #000, 2px 2px 10px #000;
 }
 .management_tip_list a:hover {
@@ -561,13 +562,13 @@ export default {
   display: block;
   height: 1px;
   background-color: #a2a2a2;
-  width: 80%;
+  width: 75%;
 }
 .section:nth-child(4) h2 {
   margin-top: 1rem;
 }
 .contact {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
