@@ -11,19 +11,19 @@
           <img src="../assets/images/kardoc.png" alt="로고">
         </a>
       </h1>
-        <form class="signup_form" action="">
+        <form class="signup_form">
           <label for="mem_name"></label>
-            <input id="mem_name" type="text" placeholder="이름" value="" maxlength="10" v-model="username">
+            <input id="mem_name" type="text" placeholder="이름" maxlength="20" v-model="username">
           <label for="mem_email"></label>
-            <input id="mem_email" type="email" placeholder="이메일" value="" maxlength="20" v-model="email">
+            <input id="mem_email" type="email" placeholder="이메일" maxlength="20" v-model="email">
           <label for="mem_pwd"></label>
-            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" value="" minlength="6" maxlength="15" v-model="password">
+            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" minlength="6" maxlength="15" v-model="password">
           <label for="mem_birth"></label>
-            <input id="mem_birth" type="text" placeholder="생년월일 EX) YYYY-MM-DD" value="" maxlength="10" v-model="birth">
+            <input id="mem_birth" type="text" placeholder="생년월일 EX) YYYY-MM-DD" maxlength="10" v-model="birth">
           <label for="mem_tel"></label>
-            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" value="" v-model="phone">
+            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" v-model="phone">
           <label for="mem_gender"></label>
-            <input id="mem_gender" type="text" placeholder="성별 : F or M" value="" v-model="gender">
+            <input id="mem_gender" type="text" placeholder="성별 : F or M" v-model="gender">
           <p>
             <span class="separate_line">개인정보 이용동의</span>
             <label for="agreement"></label>
@@ -42,46 +42,38 @@ export default {
   name: 'SignUp_wrapper',
   data() {
     return {
-      email: '',
-      username: '',
-      password: '',
-      birth: '',
-      phone: '',
-      gender: ''
+      signUpInfo: {
+        email: '',
+        username: '',
+        password: '',
+        birth: '',
+        phone: '',
+        gender: ''
+      }
     }
   },
   methods: {
+    moveIntro() {
+      this.$router.push('/');
+    },
     signUp() {
       if(!this.email || !this.username || !this.password || !this.birth || !this.phone || !this.gender) {
-        console.error('양식을 모두 채워주세요');
+        window.alert('양식을 모두 채워주세요');
       }
-      this.$http.post('http://api.kardoc.kr/user/', {
-        email: this.email,
-        username: this.username,
-        password: this.password,
-        birth: this.birth,
-        phone: this.phone,
-        gender: this.gender
-      })
+      this.$http.post('http://api.kardoc.kr/user/', this.signUpInfo)
       .then(response => {
-        console.log(response);
         if(response.status === 201 && response.statusText === 'Created') {
-          this.email = '';
-          this.username = '';
-          this.password = '';
-          this.birth = '';
-          this.phone = '';
-          this.gender = '';
-          window.alert(response.data.name + '님, 환영합니다!');
+          this.signUpInfo.email = '';
+          this.signUpInfo.username = '';
+          this.signUpInfo.password = '';
+          this.signUpInfo.birth = '';
+          this.signUpInfo.phone = '';
+          this.signUpInfo.gender = '';
+          window.alert(response.data.username + '님, 환영합니다!');
         }
-      });
+        moveIntro()
+      })
       .catch(error => {
-        this.email = '';
-        this.username = '';
-        this.password = '';
-        this.birth = '';
-        this.phone = '';
-        this.gender = '';
         window.alert('회원 가입에 실패했습니다.');
       });
     }
