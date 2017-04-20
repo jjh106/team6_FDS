@@ -101,16 +101,16 @@ export default {
     }),
     
     $(document).ready( function() {
-        var fixedGnb = $( '.gnb' ).offset();
-        $(window).scroll( function() {
-          if ( $(document).scrollTop() > fixedGnb.top ) {
-            $('.gnb').addClass('gnb_fixed');
-          }
-          else {
-            $('.gnb').removeClass('gnb_fixed');
-          }
-        })
+      var fixedGnb = $( '.gnb' ).offset();
+      $(window).scroll( function() {
+        if ( $(document).scrollTop() > fixedGnb.top ) {
+          $('.gnb').addClass('gnb_fixed');
+        }
+        else {
+          $('.gnb').removeClass('gnb_fixed');
+        }
       })
+    })
   }
 }
 </script>
@@ -119,7 +119,7 @@ export default {
 
 /*헤더 영역*/
 .main_header{
-  background-image: url(../../assets/images/k-021.jpg);
+  background-image: url(../../assets/images/road.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

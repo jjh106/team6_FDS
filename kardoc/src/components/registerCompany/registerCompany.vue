@@ -102,7 +102,7 @@ ul {
 .register_container {
   background-color: rgba(236, 240, 241, 0.90);
   width: 70%;
-  margin:3rem auto;
+  margin: 5rem auto;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 }
@@ -131,21 +131,21 @@ ul {
   min-width: 16rem;
   padding: 1rem 0 1rem 1rem;
   background: transparent;
-  border: 0;
-  border-bottom: 1px solid #bbb;
+  border: 2px solid #bbb;
+  border-radius: 25px;
   font-size: .8rem;
   outline: none;
   transition: all .5s ease-in-out;
 }
 
 .register_form input:focus {
-  border-bottom: 1px solid #34a77b;
+  border: 2px solid #34a77b;
 }
 
 .find_region {
   width: 80%;
   margin: 0 auto;
-  padding: 1rem 0 0;
+  padding: 0;
 }
 
 .find_region a {
@@ -188,7 +188,7 @@ ul {
   background: #34a77b;
   color: #ECF0F1;
   width: 15rem;
-  margin: 3rem auto 0;
+  margin: 2rem auto 0;
   padding: .8rem 0;
   display: block;
   font-size: 0.9rem;

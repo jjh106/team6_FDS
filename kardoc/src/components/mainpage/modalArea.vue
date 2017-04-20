@@ -9,7 +9,7 @@
         <li class="region"><button type="button">경기도</button></li>
         <li class="region"><button type="button">인천광역시</button></li>
         <li class="region"><button type="button">부산광역시</button></li>
-				<district v-if="!is_show_gu"></district>
+				<district v-if="!is_show_gu" @selectOk="transText"></district>
         <li class="region"><button type="button">대전광역시</button></li>
         <li class="region"><button type="button">대구광역시</button></li>
         <li class="region"><button type="button">광주광역시</button></li>
@@ -24,7 +24,7 @@
         <li class="region"><button type="button">전라남도</button></li>
         <li class="region"><button type="button">세종시</button></li>
       </ul>
-			<button type="button" class="ok_btn" @selectOk="transText">{{button_text}}</button>
+			<button type="button" class="ok_btn">{{button_text}}</button>
     </div>
   </div>
 </template>
@@ -47,8 +47,8 @@ export default {
 		showGu() {
 			this.is_show_gu = !this.is_show_gu;
 		},
-    transText() {
-      this.button_text = "선택완료"
+    transText(gu) {
+      this.button_text = gu;
     }
 	}
 }

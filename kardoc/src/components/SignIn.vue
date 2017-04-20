@@ -33,32 +33,6 @@ export default {
     return {
 
     }
-  },
-  methods: {
-    clickedLoginButton() {
-      var email = document.querySelector('#login_id').value;
-      var password = document.querySelector('#login_pwd').value;
-      var user_data = {
-        email: email,
-        password: password
-      }
-      this.Login(user_data);
-    },
-    Login(user_data) {
-      console.log(user_data);
-      $.ajax({
-        url: "https://www.kardoc.kr/user/",
-        type: 'POST',
-        dataType: "json",
-        data: user_data
-      })
-      .done(function(response){
-        console.log('done', response);
-        var tokenKey = response.key;
-        var user_id = response.user.email;
-        var user_pwd = response.user.password;
-      })
-    }
   }
 }
 </script>

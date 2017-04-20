@@ -18,12 +18,8 @@
             <input id="mem_email" type="email" placeholder="이메일" maxlength="20" v-model="email">
           <label for="mem_pwd"></label>
             <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" minlength="6" maxlength="15" v-model="password">
-          <label for="mem_birth"></label>
-            <input id="mem_birth" type="text" placeholder="생년월일 EX) YYYY-MM-DD" maxlength="10" v-model="birth">
           <label for="mem_tel"></label>
             <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" v-model="phone">
-          <label for="mem_gender"></label>
-            <input id="mem_gender" type="text" placeholder="성별 : F or M" v-model="gender">
           <p>
             <span class="separate_line">개인정보 이용동의</span>
             <label for="agreement"></label>
@@ -37,19 +33,15 @@
 </template>
 
 <script>
-// import axios from 'axios'
+
 export default {
   name: 'SignUp_wrapper',
   data() {
     return {
-      signUpInfo: {
-        email: '',
-        username: '',
-        password: '',
-        birth: '',
-        phone: '',
-        gender: ''
-      }
+      email: '',
+      username: '',
+      password: '',
+      phone: ''
     }
   },
   methods: {
@@ -57,25 +49,15 @@ export default {
       this.$router.push('/');
     },
     signUp() {
-      if(!this.email || !this.username || !this.password || !this.birth || !this.phone || !this.gender) {
-        window.alert('양식을 모두 채워주세요');
-      }
-      this.$http.post('http://api.kardoc.kr/user/', this.signUpInfo)
+      axios.post('https://api.kardoc.kr/user/')
+      //   email: this.email,
+      //   username: this.username,
+      //   password: this.password,
+      //   phone: this.phone
+      // })
       .then(response => {
-        if(response.status === 201 && response.statusText === 'Created') {
-          this.signUpInfo.email = '';
-          this.signUpInfo.username = '';
-          this.signUpInfo.password = '';
-          this.signUpInfo.birth = '';
-          this.signUpInfo.phone = '';
-          this.signUpInfo.gender = '';
-          window.alert(response.data.username + '님, 환영합니다!');
-        }
-        moveIntro()
+        console.log(response.status);
       })
-      .catch(error => {
-        window.alert('회원 가입에 실패했습니다.');
-      });
     }
   }
 }
@@ -156,13 +138,11 @@ h1,p,fieldset{
 
 /* 로고 */
 .logo {
-	background: #fff;
 	margin: 1rem auto 2rem;
 	display: block;
   width: 7rem;
   padding: .8rem;
   border-radius: 5px;
-  color: #ECF0F1;
   text-align: center;
   font-size: 1rem;
 }
@@ -175,7 +155,7 @@ h1,p,fieldset{
 .signup_container {
   background-color: rgba(236, 240, 241, 0.90);
   width: 70%;
-  margin: 1.5rem auto;
+  margin: 4rem auto;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 }
@@ -196,23 +176,24 @@ h1,p,fieldset{
 
 /*회원가입 작성 폼 */
 .signup_form {
-  margin-top: -2rem;
+  margin-top: -1rem;
+  margin-bottom: .5rem;
 }
 .signup_form > input {
   margin: .5rem auto;
   display: block;
-  width: 50%;
+  width: 60%;
   min-width: 18rem;
   padding: .8rem 0 .8rem 1rem;
   font-size: .8rem;
   background: transparent;
-  border: none;
-  border-bottom: 2px solid #aaa;
+  border: 2px solid #aaa;
+  border-radius: 20px;
   outline: none;
   transition: all .5s ease-in-out;
 }
 .signup_form input:focus {
-  border-bottom: 2px solid #34a77b;
+  border: 2px solid #34a77b;
 }
 .signup_form fieldset {
   text-align: center;
@@ -221,11 +202,6 @@ h1,p,fieldset{
 }
 .signup_form legend {
   display: none;
-}
-#male, #female {
-  display: inline-block;
-  width: 1rem;
-  margin-top: 1rem;
 }
 #agreement {
   margin-top: -1rem;
