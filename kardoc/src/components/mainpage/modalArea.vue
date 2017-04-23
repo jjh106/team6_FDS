@@ -142,11 +142,12 @@ export default {
 .ok_btn {
 	width: 10rem;
 	margin-top: 1.5rem;
-	padding: .5rem;
+	padding: .6rem;
 	border: none;
-	background-color: #ECF0F1;
+	background-color: #fff;
 	cursor: pointer;
 	color: #2c3e50;
-	font-weight: 700;
+	font-weight: bold;
+  font-size: .9rem;
 }
 </style>

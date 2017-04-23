@@ -92,7 +92,7 @@ h1, p{
 /* 로고 */
 .logo {
 	background: #fff;
-	margin: 0 auto 2rem;
+	margin: 0 auto 1rem;
 	display: block;
   width: 8rem;
   border-radius: 5px;
@@ -118,7 +118,7 @@ h1, p{
 .login_container {
   background-color: rgba(236, 240, 241, 0.8);
   width: 70%;
-  margin: 5rem auto 0;
+  margin: 6rem auto 0;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 }
@@ -150,16 +150,16 @@ h1, p{
   margin: 0 auto;
   display: block;
   background: transparent;
-  border: none;
-  border-bottom: 2px solid #aaa;
+  border: 2px solid #aaa;
+  border-radius: 20px;
   outline: none;
   transition: all .5s ease-in-out;
   width: 50%;
-  padding: .5rem 0 1rem .5rem;
+  padding: .7rem 0 .7rem 1rem;
   font-size: .8rem;
 }
 .login_form input:focus {
-  border-bottom: 2px solid #34a77b;
+  border: 2px solid #2c3e50;
 }
 #login_pwd {
   margin-top: 1rem;
@@ -174,10 +174,11 @@ h1, p{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  outline: none;
 }
 /*일반 로그인 버튼*/
 .login_btn {
-  margin-top: 2rem;
+  margin-top: 1rem;
   background: #2C3E50;
   color: #ECF0F1;
   font-weight: bold;

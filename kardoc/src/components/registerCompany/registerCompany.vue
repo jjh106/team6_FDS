@@ -129,7 +129,7 @@ ul {
   width: 60%;
   margin: 1rem auto;
   min-width: 16rem;
-  padding: 1rem 0 1rem 1rem;
+  padding: .8rem 0 .8rem 1rem;
   background: transparent;
   border: 2px solid #bbb;
   border-radius: 25px;
@@ -139,7 +139,7 @@ ul {
 }
 
 .register_form input:focus {
-  border: 2px solid #34a77b;
+  border: 2px solid #2c3e50;
 }
 
 .find_region {

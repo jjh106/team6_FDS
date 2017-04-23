@@ -131,7 +131,6 @@ export default {
   95% {transform: rotate(20deg);}
   100% {left: 15%;}
 }
-
 .logo {
   background-color: #fff;
   display: inline-block;
@@ -161,10 +160,6 @@ export default {
   width: 100%;
   height: auto;
   margin-top: 2rem;
-}
-/* 탑 네비게이션 */
-.nav_top {
-  position: relative;
 }
 
 /* 마이페이지, 입점신청 */
@@ -273,23 +268,28 @@ export default {
   position: relative;
   padding: .5rem 0;
   overflow: hidden;
-  z-index: 0;
+  z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.19);
 }
 .gnb::after {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-sizing: content-box;
-    background-color: hsla(0, 0%, 100%, 0.1); 
-    box-shadow: 0 4px 10px #333;
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
-    transform: scale(1.4);
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: content-box;
+  background-color: hsla(0, 0%, 100%, 0.1); 
+  box-shadow: 0 4px 10px #333;
+}
+.gnb_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(24, 24, 24, 1);
 }
 .main_menu {
   width: 60%;

@@ -11,21 +11,21 @@
           <img src="../assets/images/kardoc.png" alt="로고">
         </a>
       </h1>
-        <form class="signup_form">
+        <form class="signup_form" ref="form" method="POST" @submit.prevent="signUp">
           <label for="mem_name"></label>
-            <input id="mem_name" type="text" placeholder="이름" maxlength="20" v-model="username">
+            <input id="mem_name" type="text" placeholder="이름" maxlength="20" v-model="userInfo.username">
           <label for="mem_email"></label>
-            <input id="mem_email" type="email" placeholder="이메일" maxlength="20" v-model="email">
+            <input id="mem_email" type="email" placeholder="이메일" maxlength="20" v-model="userInfo.email">
           <label for="mem_pwd"></label>
-            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" minlength="6" maxlength="15" v-model="password">
+            <input id="mem_pwd" type="password" placeholder="비밀번호(6~15자)" minlength="6" maxlength="15" v-model="userInfo.password">
           <label for="mem_tel"></label>
-            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" v-model="phone">
+            <input id="mem_tel" type="text" placeholder="전화번호  '-'를 제외하고 작성" v-model="userInfo.phone">
           <p>
             <span class="separate_line">개인정보 이용동의</span>
             <label for="agreement"></label>
             <input id="agreement" type="checkbox" name="약관동의" value="agree" checked="">
           </p>
-          <button class="signup_btn" type="submit" @click="signUp">작성 완료</button>
+          <button class="signup_btn" type="submit">작성 완료</button>
         </form>
       </div>
     </div>
@@ -38,28 +38,28 @@ export default {
   name: 'SignUp_wrapper',
   data() {
     return {
-      email: '',
-      username: '',
-      password: '',
-      phone: ''
+      userInfo: {
+        email: '',
+        username: '',
+        password: '',
+        phone: ''
+      },
+      form: ''
     }
   },
   methods: {
     moveIntro() {
-      this.$router.push('/');
+      this.$router.push({path: '/'});
     },
     signUp() {
-      axios.post('https://api.kardoc.kr/user/')
-      //   email: this.email,
-      //   username: this.username,
-      //   password: this.password,
-      //   phone: this.phone
-      // })
+      var _this = this
+      var userData = new FormData(this.$refs.form);
+      axios.post('https://api.kardoc.kr/user/', userData)
       .then(response => {
-        console.log(response.status);
-      })
+        console.log(response.status)
+      });
     }
-  }
+  } 
 }
 </script>
 
@@ -193,7 +193,7 @@ h1,p,fieldset{
   transition: all .5s ease-in-out;
 }
 .signup_form input:focus {
-  border: 2px solid #34a77b;
+  border: 2px solid #2c3e50;
 }
 .signup_form fieldset {
   text-align: center;

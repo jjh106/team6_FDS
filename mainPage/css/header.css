@@ -83,12 +83,10 @@
 
 
 /*메인메뉴*/
-
 .gnb {
   background: rgba(24, 24, 24, 0.4);
   padding: 2px 0;
 }
-
 /*스크롤 이벤트*/
 .gnb_fixed {
   position: fixed;
@@ -98,7 +96,6 @@
   z-index: 100;
   background: rgba(24, 24, 24, 0.9)
 }
-
 .main_menu {
   width: 60%;
   margin: 0 auto;
@@ -106,12 +103,10 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .main_menu li {
   width: 20%;
   text-align: center;
 }
-
 .main_menu li a {
   display: block;
   width: 100%;
@@ -123,9 +118,7 @@
   transition: all .3s ease-in-out;
   position: relative;
 }
-
 /*모바일*/
-
 .burger_bar {
   display: none;
 }

@@ -25,11 +25,6 @@
 					<input type="text" id="car-number" placeholder="차량 번호" required>
 				</fieldset>
 			</form>
-			<div class="photo_zone">
-    		<input type="file" @change="onFileChange">
-    		<input type="file" @change="onFileChange">
-    		<input type="file" @change="onFileChange">
-			</div>
 			<form>
 				<fieldset> 
 					<legend>상세 설명</legend>
@@ -211,30 +206,22 @@ h1,p{
   background-color: rgba(236, 240, 241, 0.8);
   width: 70%;
   min-width: 24rem;
-  margin: 5rem auto;
+  margin: 6rem auto;
   padding: 2rem 0;
   box-shadow: 2px 2px 4px #2a2a2a, 4px 4px 8px #2a2a2a;
 	text-align: center;
 }
 .area {
-	width: 31.5%;
+	width: 32.5%;
 	text-align: center;
 	cursor: pointer;
 }
 .parts {
-	width: 31.5%;
+	width: 32.5%;
 	text-align: center;
 	cursor: pointer;
 }
-.photo_zone {
-	margin: 1rem auto 0;
-	background: #fff;
-	width: 425px;
-}
-.photo_zone input {
-	width: 130px;
-	margin: .2rem 0;
-}
+
 /* 폼 */
 .wrapper form {
 	margin-top: 1rem;
@@ -244,18 +231,30 @@ h1,p{
 	border: none;
 }
 .wrapper input {
+	background-color: transparent;
+	border: 2px solid #aaa;
+	border-radius: 20px;
 	padding: .5rem 0 .5rem 0;
-	border: none;
 	text-align: center;
+	outline: none;
+}
+.wrapper input:hover {
+	border: 2px solid #2c3e50;
 }
 .wrapper select {
-	border: none;
+	background-color: transparent;
+	border: 2px solid #aaa;
+	border-radius: 20px;
 	padding: .45rem;
+	outline: none;
 }
 #detail-desc {
-	width: 425px;
+	width: 435px;
 	height: 100px;
-	border: none;
+	border: 2px solid #aaa;
+	background-color: transparent;
+	outline: none;
+	border-radius: 5px;
 	padding: 0.8rem;
 }
 .checkbox {
@@ -263,16 +262,16 @@ h1,p{
 	display: inline-block;
 }
 #phone-number {
-	width: 425px;
+	width: 435px;
 	padding: .3rem;
 }
 .submit-btn {
 	margin-top: 20px;
 	width: 30%;
- border-radius: 3px;
- background-color: #34a77b;
- border: none;
- color: #fff;
- height: 30px;
+ 	border-radius: 3px;
+ 	background-color: #34a77b;
+ 	border: none;
+ 	color: #fff;
+ 	height: 30px;
 }
 </style>
